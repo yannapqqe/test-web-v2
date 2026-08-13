@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>活動記錄 - 愛友家</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/y-normalize.css">
+    <link rel="stylesheet" href="css/y-framework.css">
+    <link rel="stylesheet" href="css/y-colour.css"> 
+    <link rel="stylesheet" href="css/y-custom.css">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+
+    <!-- Google Font: Noto Sans Traditional Chinese -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+	
+	<script src="script.js"></script>
+    
+</head>
+
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<div class="y-top y-white" style="z-index: 1000; position: sticky; top: 0;">
+    <div class="y-auto y-padding y-large y-flex y-items-center y-justify-between">
+        
+        <!-- Logo on Left -->
+        <a href="index.html" class="y-flex y-items-center">
+            <img src="picture/ngo/nav-Logo.png" alt="機構標誌" class="nav-logo">
+        </a>
+
+        <!-- Desktop Links (Hidden on mobile screens ≤ 768px) -->
+        <div class="y-flex y-items-center y-gap-8 nav-desktop">
+            <a href="index.html" class="y-bar-item y-button y-hover-light-grey y-round">首頁</a>
+            <a href="about-us.html" class="y-bar-item y-button y-hover-light-grey y-round">關於我們</a>
+            <a href="our-members.html" class="y-bar-item y-button y-hover-light-grey y-round">我們的團隊</a>
+            <a href="events.html" class="y-bar-item y-button y-hover-light-grey y-text-pink y-round">活動</a>
+            <a href="contact.html" class="button y-margin-left"><span>聯絡我們</span></a>
+        </div>
+
+        <!-- Hamburger / Close Button (Visible ONLY on mobile ≤ 768px) -->
+        <button id="mobileNavBtn" class="nav-mobile-btn y-btn y-pink y-text-white y-round" onclick="toggleMobileNav()">
+            <span id="navIcon">☰</span>
+        </button>
+
+    </div>
+
+    <!-- Mobile Dropdown Menu (Full-width vertical list like screenshot) -->
+    <div id="mobileNavMenu" class="mobile-menu-dropdown y-white">
+        <a href="index.html" class="mobile-nav-item">首頁</a>
+        <a href="about-us.html" class="mobile-nav-item">關於我們</a>
+        <a href="our-members.html" class="mobile-nav-item">我們的團隊</a>
+        <a href="events.html" class="mobile-nav-item">活動</a>
+        <a href="contact.html" class="y-pink y-pink mobile-nav-item">聯絡我們</a>
+    </div>
+</div>
+
+<!-- ================= PAGE CONTENT ================= -->
+<div class="y-container y-padding-64 animated-holographic-rainbow pure-css-bubbles">
+  <div class="y-auto y-padding-32">
+  
+    <h1 class="y-center y-jumbo y-bold y-text-pink y-border-bottom" style="margin-bottom: 48px;">精彩活動記錄</h1>
+
+<!-- TABS NAVIGATION -->
+<div class="y-flex y-items-center y-margin-bottom" style="position: relative; max-width: 100%;">
+  
+  <!-- Left Circular Arrow -->
+  <button onclick="scrollTabs(-1)" class="scroll-arrow-btn" aria-label="Scroll left">
+    <i class="fa-solid fa-angle-left"></i>
+  </button>
+
+  <div id="yearTabsContainer" class="y-flex y-items-center y-border y-border-dark-grey y-white" style="overflow-x: hidden; scroll-behavior: smooth; white-space: nowrap; flex: 1; margin: 0 12px;">
+    <a href="javascript:void(0)" onclick="openMenu(event, 'RecentEvents')" id="defaultTab" class="tablink y-padding-large y-hover-pink y-text-black y-bold y-center" style="flex: 0 0 25%; text-decoration: none; box-sizing: border-box; background-color: #ffffff;">最近</a>
+    <a href="javascript:void(0)" onclick="openMenu(event, 'Year2027')" class="tablink y-padding-large y-hover-pink y-text-black y-bold y-center" style="flex: 0 0 25%; text-decoration: none; box-sizing: border-box; background-color: #ffffff;">2027</a>
+    <a href="javascript:void(0)" onclick="openMenu(event, 'Year2026')" class="tablink y-padding-large y-hover-pink y-text-black y-bold y-center" style="flex: 0 0 25%; text-decoration: none; box-sizing: border-box; background-color: #ffffff;">2026</a>
+    <a href="javascript:void(0)" onclick="openMenu(event, 'Year2025')" class="tablink y-padding-large y-hover-pink y-text-black y-bold y-center" style="flex: 0 0 25%; text-decoration: none; box-sizing: border-box; background-color: #ffffff;">2025</a>
+    <a href="javascript:void(0)" onclick="openMenu(event, 'Year2024')" class="tablink y-padding-large y-hover-pink y-text-black y-bold y-center" style="flex: 0 0 25%; text-decoration: none; box-sizing: border-box; background-color: #ffffff;">2024</a>
+    <a href="javascript:void(0)" onclick="openMenu(event, 'Year2023')" class="tablink y-padding-large y-hover-pink y-text-black y-bold y-center" style="flex: 0 0 25%; text-decoration: none; box-sizing: border-box; background-color: #ffffff;">2023</a>
+  </div>
+
+  <!-- Right Circular Arrow -->
+  <button onclick="scrollTabs(1)" class="scroll-arrow-btn" aria-label="Scroll right">
+    <i class="fa-solid fa-angle-right"></i>
+  </button>
+
+</div>
+
+<!-- ============================================================== -->
+<!-- RECENT EVENTS CONTENT (近期活動) -->
+<!-- ============================================================== -->
+<div id="RecentEvents" class="year-content">
+    <div class="y-border-bottom y-border-dark-grey y-padding-32 y-margin-bottom" style="border-width: 2px !important;">
+        
+        <!-- Header Info Block -->
+        <div class="y-margin-bottom">
+            <!-- Event Title & Status -->
+            <div class="y-flex y-items-center y-gap-16 y-flex-wrap" style="margin-bottom: 8px;">
+                <h2 class="y-xlarge y-bold y-text-black" style="margin: 0;">跨代共融工作坊</h2>
+                <span class="y-medium y-text-dark-grey">(即將舉辦 / 籌備中)</span>
+            </div>
+
+            <!-- Partner Company Subtitle -->
+            <p class="y-small y-bold y-text-pink" style="margin-top: 0; margin-bottom: 12px;">
+                <i class="fa-solid fa-handshake"></i> 合作機構：ABC 企業有限公司
+            </p>
+
+            <!-- 2-Line Short Intro -->
+            <p class="y-medium y-text-dark-grey" style="line-height: 1.6; margin: 0;">
+                本活動旨在促進青年與長者之間的溝通與理解，透過互動工作坊共同創作工藝品。<br>
+                攜手建構跨世代和諧社區，讓參與者在交流中分享經驗與傳承文化價值。
+            </p>
+        </div>
+
+        <!-- 9-Image Gallery Grid -->
+        <div class="y-row-padding y-margin-top">
+            <div class="y-third y-margin-bottom"><div class="y-white y-card y-round" style="overflow: hidden; aspect-ratio: 4/3;"><img src="picture/ngo/event1_1.jpg" alt="1" style="width:100%; height:100%; object-fit:cover;"></div></div>
+            <div class="y-third y-margin-bottom"><div class="y-white y-card y-round" style="overflow: hidden; aspect-ratio: 4/3;"><img src="picture/ngo/event1_2.jpg" alt="2" style="width:100%; height:100%; object-fit:cover;"></div></div>
+            <div class="y-third y-margin-bottom"><div class="y-white y-card y-round" style="overflow: hidden; aspect-ratio: 4/3;"><img src="picture/ngo/event1_3.jpg" alt="3" style="width:100%; height:100%; object-fit:cover;"></div></div>
+            <div class="y-third y-margin-bottom"><div class="y-white y-card y-round" style="overflow: hidden; aspect-ratio: 4/3;"><img src="picture/ngo/event1_1.jpg" alt="4" style="width:100%; height:100%; object-fit:cover;"></div></div>
+            <div class="y-third y-margin-bottom"><div class="y-white y-card y-round" style="overflow: hidden; aspect-ratio: 4/3;"><img src="picture/ngo/event1_2.jpg" alt="5" style="width:100%; height:100%; object-fit:cover;"></div></div>
+            <div class="y-third y-margin-bottom"><div class="y-white y-card y-round" style="overflow: hidden; aspect-ratio: 4/3;"><img src="picture/ngo/event1_3.jpg" alt="6" style="width:100%; height:100%; object-fit:cover;"></div></div>
+            <div class="y-third y-margin-bottom"><div class="y-white y-card y-round" style="overflow: hidden; aspect-ratio: 4/3;"><img src="picture/ngo/event1_1.jpg" alt="7" style="width:100%; height:100%; object-fit:cover;"></div></div>
+            <div class="y-third y-margin-bottom"><div class="y-white y-card y-round" style="overflow: hidden; aspect-ratio: 4/3;"><img src="picture/ngo/event1_2.jpg" alt="8" style="width:100%; height:100%; object-fit:cover;"></div></div>
+            <div class="y-third y-margin-bottom"><div class="y-white y-card y-round" style="overflow: hidden; aspect-ratio: 4/3;"><img src="picture/ngo/event1_3.jpg" alt="9" style="width:100%; height:100%; object-fit:cover;"></div></div>
+        </div>
+
+    </div>
+</div>
+	
+	<!-- ============================================================== -->
+    <!-- YEAR 2027 CONTENT -->
+    <!-- ============================================================== -->
+    <div id="Year2027" class="year-content">
+        <div class="y-center y-padding-64 y-large y-text-dark-grey">2027年度活動紀錄即將更新。</div>
+    </div>
+
+<!-- ============================================================== -->
+<!-- YEAR 2026 CONTENT -->
+<!-- ============================================================== -->
+<div id="Year2026" class="year-content">
+    
+    <!-- Event 1 -->
+    <div class="y-border-bottom y-border-dark-grey y-padding-32 y-margin-bottom" style="border-width: 2px !important;">
+        
+        <!-- Header Info Block -->
+        <div class="y-margin-bottom">
+            <!-- Event Title & Date -->
+            <div class="y-flex y-items-center y-gap-16 y-flex-wrap" style="margin-bottom: 8px;">
+                <h2 class="y-xlarge y-bold y-text-black" style="margin: 0;">社區關懷義工日</h2>
+                <span class="y-medium y-text-dark-grey">(2026年5月20日)</span>
+            </div>
+
+            <!-- Partner Company Subtitle -->
+            <p class="y-small y-bold y-text-pink" style="margin-top: 0; margin-bottom: 12px;">
+                <i class="fa-solid fa-handshake"></i> 合作機構：XYZ 慈善基金會
+            </p>
+
+            <!-- 2-Line Short Intro -->
+            <p class="y-medium y-text-dark-grey" style="line-height: 1.6; margin: 0;">
+                組織義工團隊走入社區，為有需要家庭與獨居長者送上節日禮包與溫暖支援。<br>
+                透過面對面的關懷與互動，實踐社區互助精神，提升居民幸福感與歸屬感。
+            </p>
+        </div>
+
+        <!-- 9-Image Gallery Grid -->
+        <div class="y-row-padding y-margin-top">
+            <div class="y-third y-margin-bottom"><div class="y-white y-card y-round" style="overflow: hidden; aspect-ratio: 4/3;"><img src="picture/ngo/event1_1.jpg" alt="1" style="width:100%; height:100%; object-fit:cover;"></div></div>
+            <div class="y-third y-margin-bottom"><div class="y-white y-card y-round" style="overflow: hidden; aspect-ratio: 4/3;"><img src="picture/ngo/event1_2.jpg" alt="2" style="width:100%; height:100%; object-fit:cover;"></div></div>
+            <div class="y-third y-margin-bottom"><div class="y-white y-card y-round" style="overflow: hidden; aspect-ratio: 4/3;"><img src="picture/ngo/event1_3.jpg" alt="3" style="width:100%; height:100%; object-fit:cover;"></div></div>
+            <div class="y-third y-margin-bottom"><div class="y-white y-card y-round" style="overflow: hidden; aspect-ratio: 4/3;"><img src="picture/ngo/event1_1.jpg" alt="4" style="width:100%; height:100%; object-fit:cover;"></div></div>
+            <div class="y-third y-margin-bottom"><div class="y-white y-card y-round" style="overflow: hidden; aspect-ratio: 4/3;"><img src="picture/ngo/event1_1.jpg" alt="5" style="width:100%; height:100%; object-fit:cover;"></div></div>
+            <div class="y-third y-margin-bottom"><div class="y-white y-card y-round" style="overflow: hidden; aspect-ratio: 4/3;"><img src="picture/ngo/event1_2.jpg" alt="6" style="width:100%; height:100%; object-fit:cover;"></div></div>
+            <div class="y-third y-margin-bottom"><div class="y-white y-card y-round" style="overflow: hidden; aspect-ratio: 4/3;"><img src="picture/ngo/event1_3.jpg" alt="7" style="width:100%; height:100%; object-fit:cover;"></div></div>
+            <div class="y-third y-margin-bottom"><div class="y-white y-card y-round" style="overflow: hidden; aspect-ratio: 4/3;"><img src="picture/ngo/event1_2.jpg" alt="8" style="width:100%; height:100%; object-fit:cover;"></div></div>
+            <div class="y-third y-margin-bottom"><div class="y-white y-card y-round" style="overflow: hidden; aspect-ratio: 4/3;"><img src="picture/ngo/event1_3.jpg" alt="9" style="width:100%; height:100%; object-fit:cover;"></div></div>
+        </div>
+    </div>
+
+    <!-- Event 2 -->
+    <div class="y-border-bottom y-border-dark-grey y-padding-32 y-margin-bottom" style="border-width: 2px !important;">
+        
+        <!-- Header Info Block -->
+        <div class="y-margin-bottom">
+            <!-- Event Title & Date -->
+            <div class="y-flex y-items-center y-gap-16 y-flex-wrap" style="margin-bottom: 8px;">
+                <h2 class="y-xlarge y-bold y-text-black" style="margin: 0;">青年技能培訓工作坊</h2>
+                <span class="y-medium y-text-dark-grey">(2026年3月15日)</span>
+            </div>
+
+            <!-- Partner Company Subtitle -->
+            <p class="y-small y-bold y-text-pink" style="margin-top: 0; margin-bottom: 12px;">
+                <i class="fa-solid fa-handshake"></i> 合作機構：創新科技培訓中心
+            </p>
+
+            <!-- 2-Line Short Intro -->
+            <p class="y-medium y-text-dark-grey" style="line-height: 1.6; margin: 0;">
+                由專業導師親自指導，針對青年人裝備實用職場技能與數位應用工具。<br>
+                幫助學員建立職涯自信，拓展人際網絡並開創多元發展的機會。
+            </p>
+        </div>
+
+        <!-- 9-Image Gallery Grid -->
+        <div class="y-row-padding y-margin-top">
+            <div class="y-third y-margin-bottom"><div class="y-white y-card y-round" style="overflow: hidden; aspect-ratio: 4/3;"><img src="picture/ngo/event1_1.jpg" alt="1" style="width:100%; height:100%; object-fit:cover;"></div></div>
+            <div class="y-third y-margin-bottom"><div class="y-white y-card y-round" style="overflow: hidden; aspect-ratio: 4/3;"><img src="picture/ngo/event1_2.jpg" alt="2" style="width:100%; height:100%; object-fit:cover;"></div></div>
+            <div class="y-third y-margin-bottom"><div class="y-white y-card y-round" style="overflow: hidden; aspect-ratio: 4/3;"><img src="picture/ngo/event1_3.jpg" alt="3" style="width:100%; height:100%; object-fit:cover;"></div></div>
+            <div class="y-third y-margin-bottom"><div class="y-white y-card y-round" style="overflow: hidden; aspect-ratio: 4/3;"><img src="picture/ngo/event1_1.jpg" alt="4" style="width:100%; height:100%; object-fit:cover;"></div></div>
+            <div class="y-third y-margin-bottom"><div class="y-white y-card y-round" style="overflow: hidden; aspect-ratio: 4/3;"><img src="picture/ngo/event1_2.jpg" alt="5" style="width:100%; height:100%; object-fit:cover;"></div></div>
+            <div class="y-third y-margin-bottom"><div class="y-white y-card y-round" style="overflow: hidden; aspect-ratio: 4/3;"><img src="picture/ngo/event1_1.jpg" alt="6" style="width:100%; height:100%; object-fit:cover;"></div></div>
+            <div class="y-third y-margin-bottom"><div class="y-white y-card y-round" style="overflow: hidden; aspect-ratio: 4/3;"><img src="picture/ngo/event1_2.jpg" alt="7" style="width:100%; height:100%; object-fit:cover;"></div></div>
+            <div class="y-third y-margin-bottom"><div class="y-white y-card y-round" style="overflow: hidden; aspect-ratio: 4/3;"><img src="picture/ngo/event1_3.jpg" alt="8" style="width:100%; height:100%; object-fit:cover;"></div></div>
+            <div class="y-third y-margin-bottom"><div class="y-white y-card y-round" style="overflow: hidden; aspect-ratio: 4/3;"><img src="picture/ngo/event1_3.jpg" alt="9" style="width:100%; height:100%; object-fit:cover;"></div></div>
+        </div>
+    </div>
+
+</div>
+
+    <!-- ============================================================== -->
+    <!-- YEAR 2025 CONTENT -->
+    <!-- ============================================================== -->
+    <div id="Year2025" class="year-content">
+        <div class="y-center y-padding-64 y-large y-text-dark-grey">2025年度活動紀錄即將更新。</div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- YEAR 2024 CONTENT -->
+    <!-- ============================================================== -->
+    <div id="Year2024" class="year-content">
+        <div class="y-center y-padding-64 y-large y-text-dark-grey">2024年度活動紀錄即將更新。</div>
+    </div>
+	
+	<!-- ============================================================== -->
+    <!-- YEAR 2023 CONTENT -->
+    <!-- ============================================================== -->
+    <div id="Year2023" class="year-content">
+        <div class="y-center y-padding-64 y-large y-text-dark-grey">2023年度活動紀錄即將更新。</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="y-container y-xlarge y-padding-32 y-white">  
+  <div class="y-auto">
+    <div class="y-row-padding">
+
+      <!-- Left Column: Info (Full width on mobile) -->
+      <div class="y-third y-margin-bottom">
+        <h3 class="y-bold y-border-bottom y-border-pink y-text-pink" style="display:inline-block; padding-bottom: 4px;">
+          INFO
+        </h3>
+        <p class="y-medium y-text-black"><b>oyg</b> © 2026</p>
+        <p class="y-small y-text-dark-grey">
+          愛友家是一間以社會使命為導向的企業，致力於透過多元化的培訓與實踐機會，
+          培育青年人才及協助再投身社會人士重建自信、掌握技能，並促進跨世代社群共融。
+        </p>        
+      </div>
+      
+      <!-- Centre Column: Contact (Left side of Row 2 on mobile) -->
+      <div class="y-third y-margin-bottom">
+        <h3 class="y-bold y-border-bottom y-border-pink y-text-pink" style="display:inline-block; padding-bottom: 4px;">
+          CONTACT
+        </h3>
+        <p class="y-small y-text-dark-grey">
+          地址：九龍觀塘成業街19-21號 成業工業大廈一樓14室<br>
+          電郵：info@oyg.org<br>
+		  電話：9701 7858
+        </p>
+      </div>
+      
+      <!-- Right Column: Social Media (Right side of Row 2 on mobile) -->
+      <div class="y-third y-margin-bottom">
+        <h3 class="y-bold y-border-bottom y-border-pink y-text-pink" style="display:inline-block; padding-bottom: 4px;">
+          Social Media
+        </h3>
+        
+        <div class="y-flex y-gap-16 y-margin-top y-flex-wrap">
+          <!-- Facebook -->
+          <a href="https://facebook.com" target="_blank" class="social-icon facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          
+          <!-- Instagram -->
+          <a href="https://instagram.com" target="_blank" class="social-icon instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>  
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Copyright Divider Bar -->
+    <div class="y-center y-border-top y-border-light-grey y-padding-16 y-margin-top y-small y-text-grey">
+      Copyright © 2026 oyg. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
