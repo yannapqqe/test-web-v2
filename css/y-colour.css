@@ -1,0 +1,603 @@
+/* Color Utilities */
+
+/* Amber */
+.y-amber,
+.y-hover-amber:hover {
+    color: #000 !important;
+    background-color: #ffc107 !important;
+}
+
+/* Aqua */
+.y-aqua,
+.y-hover-aqua:hover {
+    color: #000 !important;
+    background-color: #00ffff !important;
+}
+
+/* Blue */
+.y-blue,
+.y-hover-blue:hover {
+    color: #fff !important;
+    background-color: #2196F3 !important;
+}
+
+/* Light Blue */
+.y-light-blue,
+.y-hover-light-blue:hover {
+    color: #000 !important;
+    background-color: #87CEEB !important;
+}
+
+/* Brown */
+.y-brown,
+.y-hover-brown:hover {
+    color: #fff !important;
+    background-color: #795548 !important;
+}
+
+/* Cyan */
+.y-cyan,
+.y-hover-cyan:hover {
+    color: #000 !important;
+    background-color: #00bcd4 !important;
+}
+
+/* Blue Grey */
+.y-blue-grey,
+.y-hover-blue-grey:hover,
+.y-blue-gray,
+.y-hover-blue-gray:hover {
+    color: #fff !important;
+    background-color: #607d8b !important;
+}
+
+/* Green */
+.y-green,
+.y-hover-green:hover {
+    color: #fff !important;
+    background-color: #4CAF50 !important;
+}
+
+/* Light Green */
+.y-light-green,
+.y-hover-light-green:hover {
+    color: #000 !important;
+    background-color: #8bc34a !important;
+}
+
+/* Indigo */
+.y-indigo,
+.y-hover-indigo:hover {
+    color: #fff !important;
+    background-color: #3f51b5 !important;
+}
+
+/* Khaki */
+.y-khaki,
+.y-hover-khaki:hover {
+    color: #000 !important;
+    background-color: #f0e68c !important;
+}
+
+/* Lime */
+.y-lime,
+.y-hover-lime:hover {
+    color: #000 !important;
+    background-color: #cddc39 !important;
+}
+
+/* Orange */
+.y-orange,
+.y-hover-orange:hover {
+    color: #000 !important;
+    background-color: #ff9800 !important;
+}
+
+/* Deep Orange */
+.y-deep-orange,
+.y-hover-deep-orange:hover {
+    color: #fff !important;
+    background-color: #ff5722 !important;
+}
+
+/* Pink */
+.y-pink,
+.y-hover-pink:hover {
+    color: #fff !important;
+    background-color: #e91e63 !important;
+}
+
+/* Purple */
+.y-purple,
+.y-hover-purple:hover {
+    color: #fff !important;
+    background-color: #9c27b0 !important;
+}
+
+/* Deep Purple */
+.y-deep-purple,
+.y-hover-deep-purple:hover {
+    color: #fff !important;
+    background-color: #673ab7 !important;
+}
+
+/* Red */
+.y-red,
+.y-hover-red:hover {
+    color: #fff !important;
+    background-color: #f44336 !important;
+}
+
+/* Sand */
+.y-sand,
+.y-hover-sand:hover {
+    color: #000 !important;
+    background-color: #fdf5e6 !important;
+}
+
+/* Teal */
+.y-teal,
+.y-hover-teal:hover {
+    color: #fff !important;
+    background-color: #009688 !important;
+}
+
+/* Yellow */
+.y-yellow,
+.y-hover-yellow:hover {
+    color: #000 !important;
+    background-color: #ffeb3b !important;
+}
+
+/* White */
+.y-white,
+.y-hover-white:hover {
+    color: #000 !important;
+    background-color: #fff !important;
+}
+
+/* Black */
+.y-black,
+.y-hover-black:hover {
+    color: #fff !important;
+    background-color: #000 !important;
+}
+
+/* Grey Background Colors */
+
+.y-grey,
+.y-hover-grey:hover,
+.y-gray,
+.y-hover-gray:hover {
+    color: #000 !important;
+    background-color: #9e9e9e !important;
+}
+
+.y-light-grey,
+.y-hover-light-grey:hover,
+.y-light-gray,
+.y-hover-light-gray:hover {
+    color: #000 !important;
+    background-color: #f1f1f1 !important;
+}
+
+.y-dark-grey,
+.y-hover-dark-grey:hover,
+.y-dark-gray,
+.y-hover-dark-gray:hover {
+    color: #fff !important;
+    background-color: #616161 !important;
+}
+
+/* Pale Background Colors */
+/* for alerts and messages */
+
+.y-pale-red,
+.y-hover-pale-red:hover {
+    color: #000 !important;
+    background-color: #ffdddd !important;
+}
+
+.y-pale-green,
+.y-hover-pale-green:hover {
+    color: #000 !important;
+    background-color: #ddffdd !important;
+}
+
+.y-pale-yellow,
+.y-hover-pale-yellow:hover {
+    color: #000 !important;
+    background-color: #ffffcc !important;
+}
+
+.y-pale-blue,
+.y-hover-pale-blue:hover {
+    color: #000 !important;
+    background-color: #ddffff !important;
+}
+
+/* Extended Background & Hover Colors */
+
+.y-asphalt, 
+.y-hover-asphalt:hover { 
+    color: #fff !important; 
+    background-color: #343a40 !important; 
+}
+
+.y-crimson, 
+.y-hover-crimson:hover { 
+    color: #fff !important; 
+    background-color: #a20025 !important; 
+}
+
+.y-cobalt, 
+.y-hover-cobalt:hover   { 
+    color: #fff !important; 
+    background-color: #0050ef !important; 
+}
+
+.y-emerald, 
+.y-hover-emerald:hover { 
+    color: #fff !important; 
+    background-color: #008a00 !important; 
+}
+
+.y-olive, 
+.y-hover-olive:hover     { 
+    color: #fff !important; 
+    background-color: #6d8764 !important; 
+}
+
+.y-paper, 
+.y-hover-paper:hover     { 
+    color: #000 !important; 
+    background-color: #f8f9fa !important; 
+}
+
+.y-sienna, 
+.y-hover-sienna:hover   { 
+    color: #fff !important; 
+    background-color: #a0522d !important; 
+}
+
+.y-taupe, 
+.y-hover-taupe:hover     { 
+    color: #fff !important; 
+    background-color: #87794e !important; 
+}
+
+/* Text Colors */
+
+.y-text-amber,
+.y-hover-text-amber:hover {
+    color: #ffc107 !important;
+}
+
+.y-text-aqua,
+.y-hover-text-aqua:hover {
+    color: #00ffff !important;
+}
+
+.y-text-blue,
+.y-hover-text-blue:hover {
+    color: #2196F3 !important;
+}
+
+.y-text-light-blue,
+.y-hover-text-light-blue:hover {
+    color: #87CEEB !important;
+}
+
+.y-text-brown,
+.y-hover-text-brown:hover {
+    color: #795548 !important;
+}
+
+.y-text-cyan,
+.y-hover-text-cyan:hover {
+    color: #00bcd4 !important;
+}
+
+.y-text-blue-grey,
+.y-hover-text-blue-grey:hover,
+.y-text-blue-gray,
+.y-hover-text-blue-gray:hover {
+    color: #607d8b !important;
+}
+
+.y-text-green,
+.y-hover-text-green:hover {
+    color: #4CAF50 !important;
+}
+
+.y-text-light-green,
+.y-hover-text-light-green:hover {
+    color: #8bc34a !important;
+}
+
+.y-text-indigo,
+.y-hover-text-indigo:hover {
+    color: #3f51b5 !important;
+}
+
+.y-text-khaki,
+.y-hover-text-khaki:hover {
+    color: #b4aa50 !important;
+}
+
+.y-text-lime,
+.y-hover-text-lime:hover {
+    color: #cddc39 !important;
+}
+
+.y-text-orange,
+.y-hover-text-orange:hover {
+    color: #ff9800 !important;
+}
+
+.y-text-deep-orange,
+.y-hover-text-deep-orange:hover {
+    color: #ff5722 !important;
+}
+
+.y-text-pink,
+.y-hover-text-pink:hover {
+    color: #e91e63 !important;
+}
+
+.y-text-purple,
+.y-hover-text-purple:hover {
+    color: #9c27b0 !important;
+}
+
+.y-text-deep-purple,
+.y-hover-text-deep-purple:hover {
+    color: #673ab7 !important;
+}
+
+.y-text-red,
+.y-hover-text-red:hover {
+    color: #f44336 !important;
+}
+
+.y-text-sand,
+.y-hover-text-sand:hover {
+    color: #fdf5e6 !important;
+}
+
+.y-text-teal,
+.y-hover-text-teal:hover {
+    color: #009688 !important;
+}
+
+.y-text-yellow,
+.y-hover-text-yellow:hover {
+    color: #d2be0e !important;
+}
+
+.y-text-white,
+.y-hover-text-white:hover {
+    color: #fff !important;
+}
+
+.y-text-black,
+.y-hover-text-black:hover {
+    color: #000 !important;
+}
+
+/* Text Grey Colors */
+
+.y-text-grey,
+.y-hover-text-grey:hover,
+.y-text-gray,
+.y-hover-text-gray:hover {
+    color: #757575 !important;
+}
+
+.y-text-light-grey,
+.y-hover-text-light-grey:hover,
+.y-text-light-gray,
+.y-hover-text-light-gray:hover {
+    color: #f1f1f1 !important;
+}
+
+.y-text-dark-grey,
+.y-hover-text-dark-grey:hover,
+.y-text-dark-gray,
+.y-hover-text-dark-gray:hover {
+    color: #3a3a3a !important;
+}
+
+
+/* Border Colors */
+
+.y-border-amber,
+.y-hover-border-amber:hover {
+    border-color: #ffc107 !important;
+}
+
+.y-border-aqua,
+.y-hover-border-aqua:hover {
+    border-color: #00ffff !important;
+}
+
+.y-border-blue,
+.y-hover-border-blue:hover {
+    border-color: #2196F3 !important;
+}
+
+.y-border-light-blue,
+.y-hover-border-light-blue:hover {
+    border-color: #87CEEB !important;
+}
+
+.y-border-brown,
+.y-hover-border-brown:hover {
+    border-color: #795548 !important;
+}
+
+.y-border-cyan,
+.y-hover-border-cyan:hover {
+    border-color: #00bcd4 !important;
+}
+
+.y-border-blue-grey,
+.y-hover-border-blue-grey:hover,
+.y-border-blue-gray,
+.y-hover-border-blue-gray:hover {
+    border-color: #607d8b !important;
+}
+
+.y-border-green,
+.y-hover-border-green:hover {
+    border-color: #4CAF50 !important;
+}
+
+.y-border-light-green,
+.y-hover-border-light-green:hover {
+    border-color: #8bc34a !important;
+}
+
+.y-border-indigo,
+.y-hover-border-indigo:hover {
+    border-color: #3f51b5 !important;
+}
+
+.y-border-khaki,
+.y-hover-border-khaki:hover {
+    border-color: #f0e68c !important;
+}
+
+.y-border-lime,
+.y-hover-border-lime:hover {
+    border-color: #cddc39 !important;
+}
+
+.y-border-orange,
+.y-hover-border-orange:hover {
+    border-color: #ff9800 !important;
+}
+
+.y-border-deep-orange,
+.y-hover-border-deep-orange:hover {
+    border-color: #ff5722 !important;
+}
+
+.y-border-pink,
+.y-hover-border-pink:hover {
+    border-color: #e91e63 !important;
+}
+
+.y-border-purple,
+.y-hover-border-purple:hover {
+    border-color: #9c27b0 !important;
+}
+
+.y-border-deep-purple,
+.y-hover-border-deep-purple:hover {
+    border-color: #673ab7 !important;
+}
+
+.y-border-red,
+.y-hover-border-red:hover {
+    border-color: #f44336 !important;
+}
+
+.y-border-sand,
+.y-hover-border-sand:hover {
+    border-color: #fdf5e6 !important;
+}
+
+.y-border-teal,
+.y-hover-border-teal:hover {
+    border-color: #009688 !important;
+}
+
+.y-border-yellow,
+.y-hover-border-yellow:hover {
+    border-color: #ffeb3b !important;
+}
+
+.y-border-white,
+.y-hover-border-white:hover {
+    border-color: #fff !important;
+}
+
+.y-border-black,
+.y-hover-border-black:hover {
+    border-color: #000 !important;
+}
+
+
+/* Grey Border Colors */
+
+.y-border-grey,
+.y-hover-border-grey:hover,
+.y-border-gray,
+.y-hover-border-gray:hover {
+    border-color: #9e9e9e !important;
+}
+
+.y-border-light-grey,
+.y-hover-border-light-grey:hover,
+.y-border-light-gray,
+.y-hover-border-light-gray:hover {
+    border-color: #f1f1f1 !important;
+}
+
+.y-border-dark-grey,
+.y-hover-border-dark-grey:hover,
+.y-border-dark-gray,
+.y-hover-border-dark-gray:hover {
+    border-color: #616161 !important;
+}
+
+
+/* Pale Border Colors */
+
+.y-border-pale-red,
+.y-hover-border-pale-red:hover {
+    border-color: #ffe7e7 !important;
+}
+
+.y-border-pale-green,
+.y-hover-border-pale-green:hover {
+    border-color: #e7ffe7 !important;
+}
+
+.y-border-pale-yellow,
+.y-hover-border-pale-yellow:hover {
+    border-color: #ffffcc !important;
+}
+
+.y-border-pale-blue,
+.y-hover-border-pale-blue:hover {
+    border-color: #e7ffff !important;
+}
+
+/* Status Colors */
+
+.y-danger  { 
+    color: #fff !important; 
+    background-color: #dd0000 !important; 
+}
+
+.y-note    { 
+    color: #000 !important; 
+    background-color: #fff599 !important; 
+}
+
+.y-info    { 
+    color: #fff !important; 
+    background-color: #0a6fc2 !important; 
+}
+
+.y-warning { 
+    color: #000 !important; 
+    background-color: #ffb305 !important; 
+}
+
+.y-success { 
+    color: #fff !important; 
+    background-color: #008a00 !important; 
+}

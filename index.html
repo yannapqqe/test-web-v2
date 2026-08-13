@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁 - 愛友家</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/y-normalize.css">
+    <link rel="stylesheet" href="css/y-framework.css">
+    <link rel="stylesheet" href="css/y-colour.css"> 
+    <link rel="stylesheet" href="css/y-custom.css">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+	
+
+    <!-- Google Font: Noto Sans Traditional Chinese -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+	
+	<script src="script.js"></script>
+</head>
+
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<div class="y-top y-white" style="z-index: 1000; position: sticky; top: 0;">
+    <div class="y-auto y-padding y-large y-flex y-items-center y-justify-between">
+        
+        <!-- Logo on Left -->
+        <a href="index.html" class="y-flex y-items-center">
+            <img src="picture/ngo/nav-Logo.png" alt="機構標誌" class="nav-logo">
+        </a>
+
+        <!-- Desktop Links (Hidden on mobile screens ≤ 768px) -->
+        <div class="y-flex y-items-center y-gap-8 nav-desktop">
+            <a href="index.html" class="y-bar-item y-button y-hover-light-grey y-round">首頁</a>
+            <a href="about-us.html" class="y-bar-item y-button y-hover-light-grey y-round">關於我們</a>
+            <a href="our-members.html" class="y-bar-item y-button y-hover-light-grey y-round">我們的團隊</a>
+            <a href="events.html" class="y-bar-item y-button y-hover-light-grey y-text-pink y-round">活動</a>
+            <a href="contact.html" class="button y-margin-left"><span>聯絡我們</span></a>
+        </div>
+
+        <!-- Hamburger / Close Button (Visible ONLY on mobile ≤ 768px) -->
+        <button id="mobileNavBtn" class="nav-mobile-btn y-btn y-pink y-text-white y-round" onclick="toggleMobileNav()">
+            <span id="navIcon">☰</span>
+        </button>
+
+    </div>
+
+    <!-- Mobile Dropdown Menu (Full-width vertical list like screenshot) -->
+    <div id="mobileNavMenu" class="mobile-menu-dropdown y-white">
+        <a href="index.html" class="mobile-nav-item">首頁</a>
+        <a href="about-us.html" class="mobile-nav-item">關於我們</a>
+        <a href="our-members.html" class="mobile-nav-item">我們的團隊</a>
+        <a href="events.html" class="mobile-nav-item">活動</a>
+        <a href="contact.html" class="y-pink y-pink mobile-nav-item">聯絡我們</a>
+    </div>
+</div>
+
+<!-- ==================== HERO HEADER ==================== -->
+<header class="hero-slider-container y-header-border-bottom animated-holographic-rainbow" id="home">
+  
+  <!-- Image Slides -->
+  <div class="hero-slides">
+    <div class="slide active">
+      <img src="picture/ngo/愛友家基金logo_3.jpg" alt="Banner 1">
+    </div>
+    <div class="slide">
+      <img src="picture/ngo/ACT Plus Charity_封面.jpg" alt="Banner 2">
+    </div>
+    <div class="slide">
+      <img src="picture/ngo/愛友家基金logo_3.jpg" alt="Banner 3">
+    </div>
+	<div class="slide">
+      <img src="picture/ngo/ACT Plus Charity_封面.jpg" alt="Banner 4">
+    </div>
+  </div>
+
+<!-- Navigation Arrows -->
+  <button class="hero-arrow prev-arrow" id="prevSlide" aria-label="Previous Slide">
+    <i class="fa-solid fa-chevron-left"></i>
+  </button>
+  <button class="hero-arrow next-arrow" id="nextSlide" aria-label="Next Slide">
+    <i class="fa-solid fa-chevron-right"></i>
+  </button>
+
+  <!-- Navigation Dots Container (LEAVE EMPTY) -->
+  <div class="hero-dots" id="heroDots"></div>
+
+</header>
+
+<!-- ================= PAGE CONTENT ================= -->
+<div class="y-container y-padding-64 animated-holographic-rainbow pure-css-bubbles">
+  <div class="y-auto y-padding-32">
+    
+    <!-- Centered Welcome Title with bigger bottom margin -->
+	<div class="y-center" style="margin-bottom: 48px;">
+	<h2 class="y-jumbo y-bold y-text-pink intro-title" style="margin: 0;">歡迎來到愛友家</h2>
+	</div>
+
+    <!-- Section 1: Short Introduction -->
+    <div class="intro-container y-margin-bottom" style="max-width: 960px; margin-left: auto; margin-right: auto; margin-bottom: 64px !important;">
+      
+      <!-- Left Side: Text Content -->
+      <div class="intro-text-col">
+        <h2 class="intro-main-title">關於我們</h2>
+        
+        <p class="intro-text">
+          愛友家是一間以社會使命為導向的企業，致力於透過多元化的培訓與實踐機會，培育青年人才及協助再投身社會人士重建自信、掌握技能，並促進跨世代社群共融。
+        </p>
+
+        <div class="intro-btn-wrapper">
+          <a href="about-us.html" class="intro-cta-btn">
+            了解更多關於我們 <i class="fa-solid fa-arrow-right-long icon-arrow"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Side: Image Column -->
+      <div class="intro-img-col">
+        <img src="picture/ngo/index-intro.jpg" alt="愛友家簡介" class="intro-image">
+      </div>
+    </div>
+
+    <hr class="y-border-black y-margin-bottom" style="opacity: 0.5; margin-bottom: 64px !important;">
+
+    <!-- Section 2: Recent Events (2 in a row on Mobile) -->
+
+      <div class="y-flex y-justify-between y-items-center y-margin-bottom y-flex-wrap">
+        <h2 class="y-jumbo y-bold y-text-pink">近期活動</h2>
+        <a href="events.html" class="y-large y-text-black y-hover-text-pink y-bold" style="text-decoration: underline;">
+          查看所有活動 🔗
+        </a>
+      </div>
+
+      <div class="y-row-padding">
+        
+        <!-- Event 1 -->
+        <div class="y-third y-margin-bottom">
+          <div class="y-white y-card y-round" style="overflow: hidden; height: 100%;">
+            <div style="aspect-ratio: 4/3; overflow: hidden;">
+              <img src="picture/ngo/event1_1.jpg" alt="跨代共融工作坊" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <div class="y-container y-padding-16">
+              <span class="y-small y-pink y-text-white y-padding y-round">即將舉辦</span>
+              <h3 class="y-bold y-large y-margin-top y-text-black">跨代共融工作坊</h3>
+              <p class="y-medium y-text-dark-grey">促進青年與長者溝通交流，共創友善和諧社區。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="y-third y-margin-bottom">
+          <div class="y-white y-card y-round" style="overflow: hidden; height: 100%;">
+            <div style="aspect-ratio: 4/3; overflow: hidden;">
+              <img src="picture/ngo/event1_2.jpg" alt="社區關懷義工日" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <div class="y-container y-padding-16">
+              <span class="y-small y-grey y-text-black y-padding y-round">2026年5月20日</span>
+              <h3 class="y-bold y-large y-margin-top y-text-black">社區關懷義工日</h3>
+              <p class="y-medium y-text-dark-grey">組織義工團隊走入社區，為有需要家庭送上溫暖支援。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="y-third y-margin-bottom">
+          <div class="y-white y-card y-round" style="overflow: hidden; height: 100%;">
+            <div style="aspect-ratio: 4/3; overflow: hidden;">
+              <img src="picture/ngo/event1_3.jpg" alt="青年技能培訓工作坊" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <div class="y-container y-padding-16">
+              <span class="y-small y-grey y-text-black y-padding y-round">2026年3月15日</span>
+              <h3 class="y-bold y-large y-margin-top y-text-black">青年技能培訓工作坊</h3>
+              <p class="y-medium y-text-dark-grey">專業導師親自指導，裝備實用職場技能與重拾自信。</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="y-container y-xlarge y-padding-32 y-white">  
+  <div class="y-auto">
+    <div class="y-row-padding">
+
+      <!-- Left Column: Info (Full width on mobile) -->
+      <div class="y-third y-margin-bottom">
+        <h3 class="y-bold y-border-bottom y-border-pink y-text-pink" style="display:inline-block; padding-bottom: 4px;">
+          INFO
+        </h3>
+        <p class="y-medium y-text-black"><b>oyg</b> © 2026</p>
+        <p class="y-small y-text-dark-grey">
+          愛友家是一間以社會使命為導向的企業，致力於透過多元化的培訓與實踐機會，
+          培育青年人才及協助再投身社會人士重建自信、掌握技能，並促進跨世代社群共融。
+        </p>        
+      </div>
+      
+      <!-- Centre Column: Contact (Left side of Row 2 on mobile) -->
+      <div class="y-third y-margin-bottom">
+        <h3 class="y-bold y-border-bottom y-border-pink y-text-pink" style="display:inline-block; padding-bottom: 4px;">
+          CONTACT
+        </h3>
+        <p class="y-small y-text-dark-grey">
+          地址：九龍觀塘成業街19-21號 成業工業大廈一樓14室<br>
+          電郵：info@oyg.org<br>
+		  電話：9701 7858
+        </p>
+      </div>
+      
+      <!-- Right Column: Social Media (Right side of Row 2 on mobile) -->
+      <div class="y-third y-margin-bottom">
+        <h3 class="y-bold y-border-bottom y-border-pink y-text-pink" style="display:inline-block; padding-bottom: 4px;">
+          Social Media
+        </h3>
+        
+        <div class="y-flex y-gap-16 y-margin-top y-flex-wrap">
+          <!-- Facebook -->
+          <a href="https://facebook.com" target="_blank" class="social-icon facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          
+          <!-- Instagram -->
+          <a href="https://instagram.com" target="_blank" class="social-icon instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>  
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Copyright Divider Bar -->
+    <div class="y-center y-border-top y-border-light-grey y-padding-16 y-margin-top y-small y-text-grey">
+      Copyright © 2026 oyg. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
