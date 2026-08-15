@@ -157,6 +157,24 @@ h6 {
     margin-right: 8px;
 }
 
+/* Base style for all hero headers */
+.hero-header {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 70vh;
+}
+
+/* Page Specific Hero Backgrounds */
+.hero-bg-about {
+    background-image: url("../picture/ngo/about-bg.jpg");
+}
+
+.hero-bg-members {
+    background-image: url("../picture/ngo/members-bg.jpg");
+}
+
+
 /*-----------------------------------------------------------------*/
 
 /* Forms */
