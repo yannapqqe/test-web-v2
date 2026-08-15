@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="css/y-normalize.css">
     <link rel="stylesheet" href="css/y-framework.css">
     <link rel="stylesheet" href="css/y-colour.css"> 
-    <link rel="stylesheet" href="css/y-custom.css">
+    
+    <!-- CSS Cache Refresh -->
+    <link rel="stylesheet" href="css/y-custom.css?v=11">
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
 
@@ -55,97 +57,105 @@
         <a href="about-us.html" class="mobile-nav-item">關於我們</a>
         <a href="our-members.html" class="mobile-nav-item">我們的團隊</a>
         <a href="events.html" class="mobile-nav-item">活動</a>
-        <a href="contact.html" class="y-pink y-pink mobile-nav-item">聯絡我們</a>
+        <a href="contact.html" class="y-pink mobile-nav-item">聯絡我們</a>
     </div>
 </div>
 
-<!-- ================= PAGE CONTENT ================= -->
+<!-- ================= PAGE CONTENT WITH BUBBLE CANVAS ================= -->
 <div class="y-container y-padding-64 animated-holographic-rainbow pure-css-bubbles">
-  <div class="y-auto y-padding-32" style="max-width: 960px; margin: 0 auto;">
   
-    <!-- Page Header & Call to Action -->
-    <div class="y-center y-margin-bottom">
-      <h1 class="y-jumbo y-bold y-text-pink" style="margin-bottom: 16px;">聯絡我們</h1>
-      <p class="y-large y-text-dark-grey y-bold" style="max-width: 800px; margin: 0 auto 16px auto;">
-        歡迎護老院、社區中心、學校及各機構洽談合作，共同創造有意義的社會價值。讓我們一起編織社區的溫暖，啟發生命的潛能。
-      </p>
-      <p class="y-medium y-text-grey" style="max-width: 750px; margin: 0 auto 48px auto; line-height: 1.8;">
-        我們相信，每個人都擁有改變自我與影響他人的力量。透過精心設計的服務與培訓，我們正在構建一個更包容、更有活力的社群網絡。
-      </p>
-    </div>
+  <!-- 1. Dedicated Bubble Canvas Layer -->
+  <div class="bubble-bg-layer"></div>
 
-    <!-- ==================== CONTACT DETAILS BOX ==================== -->
-    <div class="y-white y-padding-32 y-round-large y-card-2 y-margin-top" style="max-width: 800px; margin-left: auto; margin-right: auto;">
-      <div class="y-row-padding">
+  <!-- 2. Foreground Content Layer -->
+  <div class="bubble-content">
+    <div class="y-auto y-padding-32" style="max-width: 960px; margin: 0 auto;">
+    
+      <!-- Page Header & Call to Action -->
+      <div class="y-center y-margin-bottom">
+        <h1 class="y-jumbo y-bold y-text-pink" style="margin-bottom: 16px;">聯絡我們</h1>
+        <p class="y-large y-text-dark-grey y-bold" style="max-width: 800px; margin: 0 auto 16px auto;">
+          歡迎護老院、社區中心、學校及各機構洽談合作，共同創造有意義的社會價值。讓我們一起編織社區的溫暖，啟發生命的潛能。
+        </p>
+        <p class="y-medium y-text-grey" style="max-width: 750px; margin: 0 auto 48px auto; line-height: 1.8;">
+          我們相信，每個人都擁有改變自我與影響他人的力量。透過精心設計的服務與培訓，我們正在構建一個更包容、更有活力的社群網絡。
+        </p>
+      </div>
 
-        <!-- Address & Email Column -->
-        <div class="y-half y-margin-bottom">
-          <h3 class="y-bold y-border-bottom y-border-pink y-text-pink y-padding-bottom" style="display:inline-block;">
-            聯絡資料
-          </h3>
-          <div class="y-margin-top y-medium y-text-dark-grey">
-            <p style="margin-bottom: 16px;">
-              <strong>地址：</strong><br>
-              九龍觀塘成業街19-21號 成業工業大廈一樓14室
-            </p>
-            <p style="margin-bottom: 16px;">
-              <strong>電郵：</strong><br>
-              <a href="mailto:info@oyg.org" class="y-text-pink" style="text-decoration: none;">info@oyg.org</a>
-            </p>
-            <p>
-              <strong>電話：</strong><br>
-              <a href="https://wa.me/85297017858" target="_blank" class="y-text-pink" style="text-decoration: none;">9701 7858</a>
-            </p>
-          </div>
-        </div>
+      <!-- ==================== CONTACT DETAILS BOX ==================== -->
+      <div class="y-white y-padding-32 y-round-large y-card-2 y-margin-top" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+        <div class="y-row-padding">
 
-        <!-- Social Media Column -->
-        <div class="y-half y-margin-bottom">
-          <h3 class="y-bold y-border-bottom y-border-pink y-text-pink y-padding-bottom" style="display:inline-block;">
-            社交媒體
-          </h3>
-          <div class="y-margin-top">
-            <p class="y-medium y-text-dark-grey y-margin-bottom">關注我們的最新動態：</p>
-            <div class="y-flex y-flex-column y-gap-16">
-              <a href="#" target="_blank" class="y-button y-round-large y-light-grey y-hover-pink y-padding y-flex y-items-center y-gap-8" style="text-decoration: none;">
-                <strong>Facebook</strong>
-              </a>
-              <a href="#" target="_blank" class="y-button y-round-large y-light-grey y-hover-pink y-padding y-flex y-items-center y-gap-8" style="text-decoration: none;">
-                <strong>Instagram</strong>
-              </a>
+          <!-- Address & Email Column -->
+          <div class="y-half y-margin-bottom">
+            <h3 class="y-bold y-border-bottom y-border-pink y-text-pink y-padding-bottom" style="display:inline-block;">
+              聯絡資料
+            </h3>
+            <div class="y-margin-top y-medium y-text-dark-grey">
+              <p style="margin-bottom: 16px;">
+                <strong>地址：</strong><br>
+                九龍觀塘成業街19-21號 成業工業大廈一樓14室
+              </p>
+              <p style="margin-bottom: 16px;">
+                <strong>電郵：</strong><br>
+                <a href="mailto:info@oyg.org" class="y-text-pink" style="text-decoration: none;">info@oyg.org</a>
+              </p>
+              <p>
+                <strong>電話：</strong><br>
+                <a href="https://wa.me/85297017858" target="_blank" class="y-text-pink" style="text-decoration: none;">9701 7858</a>
+              </p>
             </div>
           </div>
+
+          <!-- Social Media Column -->
+          <div class="y-half y-margin-bottom">
+            <h3 class="y-bold y-border-bottom y-border-pink y-text-pink y-padding-bottom" style="display:inline-block;">
+              社交媒體
+            </h3>
+            <div class="y-margin-top">
+              <p class="y-medium y-text-dark-grey y-margin-bottom">關注我們的最新動態：</p>
+              <div class="y-flex y-flex-column y-gap-16">
+                <a href="#" target="_blank" class="y-button y-round-large y-light-grey y-hover-pink y-padding y-flex y-items-center y-gap-8" style="text-decoration: none;">
+                  <strong>Facebook</strong>
+                </a>
+                <a href="#" target="_blank" class="y-button y-round-large y-light-grey y-hover-pink y-padding y-flex y-items-center y-gap-8" style="text-decoration: none;">
+                  <strong>Instagram</strong>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Google Map Section -->
+        <div class="y-margin-top y-padding-top y-border-top">
+          
+          <!-- Title shifted left to match grid alignment -->
+          <h3 class="y-bold y-border-bottom y-border-pink y-text-pink y-padding-bottom y-margin-bottom heading-responsive-margin" style="display:inline-block;">
+          地圖指引
+          </h3>
+          
+          <!-- Map container stays centered & full-width -->
+          <div style="width: 100%; height: 400px; overflow: hidden;padding-left: 8px; padding-right: 8px;">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d922.7878400589925!2d114.22642362852392!3d22.31011469872468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340401454cafc281%3A0x2717505dcd75a1c!2z6KeA5aGY5oiQ5qWt6KGXMTktMjHomZ_miJDmpa3lt6Xmpa3lpKflu4g!5e0!3m2!1szh-TW!2shk!4v1786606843123!5m2!1szh-TW!2shk" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+          </div>
+
         </div>
 
       </div>
-
-<!-- Google Map Section -->
-<div class="y-margin-top y-padding-top y-border-top">
-  
-  <!-- Title shifted left to match grid alignment -->
-  <h3 class="y-bold y-border-bottom y-border-pink y-text-pink y-padding-bottom y-margin-bottom heading-responsive-margin" style="display:inline-block;">
-  地圖指引
-  </h3>
-  
-  <!-- Map container stays centered & full-width -->
-  <div style="width: 100%; height: 400px; overflow: hidden;padding-left: 8px; padding-right: 8px;">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d922.7878400589925!2d114.22642362852392!3d22.31011469872468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340401454cafc281%3A0x2717505dcd75a1c!2z6KeA5aGY5oiQ5qWt6KGXMTktMjHomZ_miJDmpa3lt6Xmpa3lpKflu4g!5e0!3m2!1szh-TW!2shk!4v1786606843123!5m2!1szh-TW!2shk" 
-      width="100%" 
-      height="100%" 
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy" 
-      referrerpolicy="strict-origin-when-cross-origin">
-    </iframe>
-  </div>
-
-</div>
-
+    
     </div>
-  
-  </div>
-</div>
+  </div> <!-- END .bubble-content -->
+
+</div> <!-- END .pure-css-bubbles -->
 
 <!-- ================= FOOTER ================= -->
 <footer class="y-container y-xlarge y-padding-32 y-white">  
@@ -172,7 +182,7 @@
         <p class="y-small y-text-dark-grey">
           地址：九龍觀塘成業街19-21號 成業工業大廈一樓14室<br>
           電郵：info@oyg.org<br>
-		  電話：9701 7858
+          電話：9701 7858
         </p>
       </div>
       
