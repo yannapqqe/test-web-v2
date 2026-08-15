@@ -160,25 +160,28 @@ h6 {
 jpg');
 }
 
-/* ================= HERO HEADER FIXES ================= */
-.hero-header {
-    width: 100%;
-    min-height: 450px; /* Ensures header has visible height on all devices */
-    height: 60vh;
+/* FORCE HERO HEADER BACKGROUND SHOW */
+header.hero-header {
+    width: 100% !important;
+    min-height: 400px !important;
+    height: 60vh !important;
+    
+    /* Apply background variable with fallback */
+    background-image: var(--hero-bg) !important;
     background-repeat: no-repeat !important;
     background-position: center center !important;
     background-size: cover !important;
-    position: relative;
+    
+    /* Ensure display stacking layer is visible */
+    position: relative !important;
+    display: flex !important;
 }
 
-/* Page Specific Hero Classes */
-.hero-bg-about {
-    background-image: url('../picture/ngo/heading-text.jpg') !important;
+/* Ensure hero overlay doesn't block background image with solid white */
+.hero-overlay {
+    background-color: transparent !important;
 }
 
-.hero-bg-members {
-    background-image: url('../picture/ngo/members-hero.jpg') !important;
-}
 
 
 /*-----------------------------------------------------------------*/
