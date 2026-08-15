@@ -142,12 +142,13 @@ h6 {
 /* Image / Background */
 
 .bgimg {
-    background-image:url("../picture/ngo/愛友家基金logo_3.jpg");
-    background-repeat:no-repeat;
-    background-position:center;
+    background-image: url("../picture/ngo/愛友家基金logo_3.jpg"); /* Default image */
+    background-repeat: no-repeat;
+    background-position: center;
     background-size:cover;
-    min-height:70vh;
+    min-height: 70vh;
 }
+
 
 .nav-logo {
     width: 160px;
