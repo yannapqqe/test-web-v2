@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="css/y-normalize.css">
     <link rel="stylesheet" href="css/y-framework.css">
     <link rel="stylesheet" href="css/y-colour.css"> 
-    <link rel="stylesheet" href="css/y-custom.css">
+    
+    <!-- Updated with ?v=11 to force GitHub Pages cache refresh -->
+    <link rel="stylesheet" href="css/y-custom.css?v=11">
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
-	
 
     <!-- Google Font: Noto Sans Traditional Chinese -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,13 +51,13 @@
 
     </div>
 
-    <!-- Mobile Dropdown Menu (Full-width vertical list like screenshot) -->
+    <!-- Mobile Dropdown Menu -->
     <div id="mobileNavMenu" class="mobile-menu-dropdown y-white">
         <a href="index.html" class="mobile-nav-item">首頁</a>
         <a href="about-us.html" class="mobile-nav-item">關於我們</a>
         <a href="our-members.html" class="mobile-nav-item">我們的團隊</a>
         <a href="events.html" class="mobile-nav-item">活動</a>
-        <a href="contact.html" class="y-pink y-pink mobile-nav-item">聯絡我們</a>
+        <a href="contact.html" class="y-pink mobile-nav-item">聯絡我們</a>
     </div>
 </div>
 
@@ -79,7 +80,7 @@
     </div>
   </div>
 
-<!-- Navigation Arrows -->
+  <!-- Navigation Arrows -->
   <button class="hero-arrow prev-arrow" id="prevSlide" aria-label="Previous Slide">
     <i class="fa-solid fa-chevron-left"></i>
   </button>
@@ -87,48 +88,53 @@
     <i class="fa-solid fa-chevron-right"></i>
   </button>
 
-  <!-- Navigation Dots Container (LEAVE EMPTY) -->
+  <!-- Navigation Dots Container -->
   <div class="hero-dots" id="heroDots"></div>
 
 </header>
 
-<!-- ================= PAGE CONTENT ================= -->
+<!-- ================= PAGE CONTENT (WITH BULLETPROOF BUBBLE LAYERS) ================= -->
 <div class="y-container y-padding-64 animated-holographic-rainbow pure-css-bubbles">
-  <div class="y-auto y-padding-32">
-    
-    <!-- Centered Welcome Title with bigger bottom margin -->
-	<div class="y-center" style="margin-bottom: 48px;">
-	<h2 class="y-jumbo y-bold y-text-pink intro-title" style="margin: 0;">歡迎來到愛友家</h2>
-	</div>
+  
+  <!-- 1. Dedicated Bubble Canvas Layer -->
+  <div class="bubble-bg-layer"></div>
 
-    <!-- Section 1: Short Introduction -->
-    <div class="intro-container y-margin-bottom" style="max-width: 960px; margin-left: auto; margin-right: auto; margin-bottom: 64px !important;">
+  <!-- 2. Foreground Content Layer -->
+  <div class="bubble-content">
+    <div class="y-auto y-padding-32">
       
-      <!-- Left Side: Text Content -->
-      <div class="intro-text-col">
-        <h2 class="intro-main-title">關於我們</h2>
-        
-        <p class="intro-text">
-          愛友家是一間以社會使命為導向的企業，致力於透過多元化的培訓與實踐機會，培育青年人才及協助再投身社會人士重建自信、掌握技能，並促進跨世代社群共融。
-        </p>
+      <!-- Centered Welcome Title -->
+      <div class="y-center" style="margin-bottom: 48px;">
+        <h2 class="y-jumbo y-bold y-text-pink intro-title" style="margin: 0;">歡迎來到愛友家</h2>
+      </div>
 
-        <div class="intro-btn-wrapper">
-          <a href="about-us.html" class="intro-cta-btn">
-            了解更多關於我們 <i class="fa-solid fa-arrow-right-long icon-arrow"></i>
-          </a>
+      <!-- Section 1: Short Introduction -->
+      <div class="intro-container y-margin-bottom" style="max-width: 960px; margin-left: auto; margin-right: auto; margin-bottom: 64px !important;">
+        
+        <!-- Left Side: Text Content -->
+        <div class="intro-text-col">
+          <h2 class="intro-main-title">關於我們</h2>
+          
+          <p class="intro-text">
+            愛友家是一間以社會使命為導向的企業，致力於透過多元化的培訓與實踐機會，培育青年人才及協助再投身社會人士重建自信、掌握技能，並促進跨世代社群共融。
+          </p>
+
+          <div class="intro-btn-wrapper">
+            <a href="about-us.html" class="intro-cta-btn">
+              了解更多關於我們 <i class="fa-solid fa-arrow-right-long icon-arrow"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Side: Image Column -->
+        <div class="intro-img-col">
+          <img src="picture/ngo/index-intro.jpg" alt="愛友家簡介" class="intro-image">
         </div>
       </div>
 
-      <!-- Right Side: Image Column -->
-      <div class="intro-img-col">
-        <img src="picture/ngo/index-intro.jpg" alt="愛友家簡介" class="intro-image">
-      </div>
-    </div>
+      <hr class="y-border-black y-margin-bottom" style="opacity: 0.5; margin-bottom: 64px !important;">
 
-    <hr class="y-border-black y-margin-bottom" style="opacity: 0.5; margin-bottom: 64px !important;">
-
-    <!-- Section 2: Recent Events (2 in a row on Mobile) -->
-
+      <!-- Section 2: Recent Events -->
       <div class="y-flex y-justify-between y-items-center y-margin-bottom y-flex-wrap">
         <h2 class="y-jumbo y-bold y-text-pink">近期活動</h2>
         <a href="events.html" class="y-large y-text-black y-hover-text-pink y-bold" style="text-decoration: underline;">
@@ -182,15 +188,16 @@
 
       </div>
     </div>
+  </div> <!-- END .bubble-content -->
 
-  </div>
+</div> <!-- END .pure-css-bubbles -->
 
 <!-- ================= FOOTER ================= -->
 <footer class="y-container y-xlarge y-padding-32 y-white">  
   <div class="y-auto">
     <div class="y-row-padding">
 
-      <!-- Left Column: Info (Full width on mobile) -->
+      <!-- Left Column: Info -->
       <div class="y-third y-margin-bottom">
         <h3 class="y-bold y-border-bottom y-border-pink y-text-pink" style="display:inline-block; padding-bottom: 4px;">
           INFO
@@ -202,7 +209,7 @@
         </p>        
       </div>
       
-      <!-- Centre Column: Contact (Left side of Row 2 on mobile) -->
+      <!-- Centre Column: Contact -->
       <div class="y-third y-margin-bottom">
         <h3 class="y-bold y-border-bottom y-border-pink y-text-pink" style="display:inline-block; padding-bottom: 4px;">
           CONTACT
@@ -214,7 +221,7 @@
         </p>
       </div>
       
-      <!-- Right Column: Social Media (Right side of Row 2 on mobile) -->
+      <!-- Right Column: Social Media -->
       <div class="y-third y-margin-bottom">
         <h3 class="y-bold y-border-bottom y-border-pink y-text-pink" style="display:inline-block; padding-bottom: 4px;">
           Social Media
