@@ -157,7 +157,9 @@ h6 {
     margin-right: 8px;
 }
 
-/* Common Header Layout */
+jpg');
+}
+
 .hero-header {
     width: 100%;
     min-height: 70vh;
@@ -165,18 +167,6 @@ h6 {
     background-position: center center;
     background-size: cover;
 }
-
-/* Page 1 Image */
-.hero-bg-about {
-    background-image: url('../picture/ngo/愛友家基金logo_3.jpg');
-}
-
-/* Page 2 Image */
-.hero-bg-members {
-    background-image: url('../picture/ngo/your-team-image.jpg');
-}
-
-
 
 /*-----------------------------------------------------------------*/
 
