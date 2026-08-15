@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="css/y-normalize.css">
     <link rel="stylesheet" href="css/y-framework.css">
     <link rel="stylesheet" href="css/y-colour.css"> 
-    <link rel="stylesheet" href="css/y-custom.css">
+    
+    <!-- CSS Cache Refresh -->
+    <link rel="stylesheet" href="css/y-custom.css?v=11">
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
-	
 
     <!-- Google Font: Noto Sans Traditional Chinese -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,253 +68,260 @@
     </div>
 </header>
 
-<!-- ================= PAGE CONTENT ================= -->
+<!-- ================= PAGE CONTENT WITH BUBBLE CANVAS ================= -->
 <div class="y-container y-padding-64 animated-holographic-rainbow pure-css-bubbles">
-  <div class="y-auto y-padding-32" style="max-width: 1000px; margin: 0 auto;">
   
-<!-- HERO SECTION (TEXT + FEATURED IMAGE SLOT) -->
-<div class="y-white y-card-4 y-round-large y-margin-bottom" style="border-top: 6px solid #e91e63; padding: 28px;">
-  <!-- Flex container forcing row direction on PC -->
-  <div class="y-row-padding hero-flex-container" style="display: flex; flex-wrap: wrap; align-items: center;">
+  <!-- 1. Dedicated Bubble Canvas Layer -->
+  <div class="bubble-bg-layer"></div>
+
+  <!-- 2. Foreground Content Layer -->
+  <div class="bubble-content">
+    <div class="y-auto y-padding-32" style="max-width: 1000px; margin: 0 auto;">
     
-    <!-- Left Text Column -->
-    <div class="hero-col-text y-margin-bottom" style="flex: 1 1 300px; padding-right: 16px;">
-      <span class="y-pink y-text-white y-padding y-round y-small y-bold y-margin-bottom" style="display: inline-block;">核心使命 MISSION</span>
-      <h1 class="y-jumbo y-bold y-text-pink" style="margin-top: 12px; margin-bottom: 16px;">愛友家</h1>
-      <p class="y-large y-text-dark-grey y-bold" style="line-height: 1.8; margin-bottom: 0;">
-        致力於透過多元化的培訓與實踐機會，培育青年人才及協助再投身社會人士重建自信、掌握技能，並促進跨世代社群共融。
-      </p>
-    </div>
+      <!-- HERO SECTION (TEXT + FEATURED IMAGE SLOT) -->
+      <div class="y-white y-card-4 y-round-large y-margin-bottom" style="border-top: 6px solid #e91e63; padding: 28px;">
+        <!-- Flex container forcing row direction on PC -->
+        <div class="y-row-padding hero-flex-container" style="display: flex; flex-wrap: wrap; align-items: center;">
+          
+          <!-- Left Text Column -->
+          <div class="hero-col-text y-margin-bottom" style="flex: 1 1 300px; padding-right: 16px;">
+            <span class="y-pink y-text-white y-padding y-round y-small y-bold y-margin-bottom" style="display: inline-block;">核心使命 MISSION</span>
+            <h1 class="y-jumbo y-bold y-text-pink" style="margin-top: 12px; margin-bottom: 16px;">愛友家</h1>
+            <p class="y-large y-text-dark-grey y-bold" style="line-height: 1.8; margin-bottom: 0;">
+              致力於透過多元化的培訓與實踐機會，培育青年人才及協助再投身社會人士重建自信、掌握技能，並促進跨世代社群共融。
+            </p>
+          </div>
 
-    <!-- Right Image Column (Side-by-side on PC, larger full-width on mobile) -->
-    <div class="hero-col-img y-margin-bottom" style="flex: 1 1 300px; display: flex; justify-content: center; width: 100%;">
-      <div class="y-card y-round-large" style="overflow: hidden; aspect-ratio: 16/10; width: 100%; max-width: 100%; margin: 0 auto;">
-        <img src="picture/ngo/about-hero.jpg" alt="愛友家團體合照" style="width:100%; height:100%; object-fit:cover; display:block;">
-      </div>
-    </div>
-
-  </div>
-</div>
-
-    <!-- SECTION 1: 業務重點 (SPLIT CARDS WITH IMAGE PLACEMENTS) -->
-    <div class="y-margin-bottom" style="margin-top: 56px;">
-      <h2 class="y-center y-xxlarge y-bold y-text-pink" style="margin-bottom: 36px;">
-        <i class="fa-solid fa-bullseye y-margin-right"></i>業務重點
-      </h2>
-      
-      <div class="y-row-padding">
-        <!-- Focus 1: Youth -->
-        <div class="y-half y-margin-bottom">
-          <div class="y-white y-round-large y-card-2" style="overflow: hidden; height: 100%;">
-            <div style="aspect-ratio: 16/9; overflow: hidden;">
-              <img src="picture/ngo/about-youth.jpg" alt="青年培訓" style="width:100%; height:100%; object-fit:cover;">
+          <!-- Right Image Column -->
+          <div class="hero-col-img y-margin-bottom" style="flex: 1 1 300px; display: flex; justify-content: center; width: 100%;">
+            <div class="y-card y-round-large" style="overflow: hidden; aspect-ratio: 16/10; width: 100%; max-width: 100%; margin: 0 auto;">
+              <img src="picture/ngo/about-hero.jpg" alt="愛友家團體合照" style="width:100%; height:100%; object-fit:cover; display:block;">
             </div>
-            <div style="padding: 28px 24px;">
-              <div class="y-xlarge y-text-pink y-bold" style="margin-bottom: 12px;">
-                <i class="fa-solid fa-seedling y-margin-right"></i>青年人培育
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SECTION 1: 業務重點 -->
+      <div class="y-margin-bottom" style="margin-top: 56px;">
+        <h2 class="y-center y-xxlarge y-bold y-text-pink" style="margin-bottom: 36px;">
+          <i class="fa-solid fa-bullseye y-margin-right"></i>業務重點
+        </h2>
+        
+        <div class="y-row-padding">
+          <!-- Focus 1: Youth -->
+          <div class="y-half y-margin-bottom">
+            <div class="y-white y-round-large y-card-2" style="overflow: hidden; height: 100%;">
+              <div style="aspect-ratio: 16/9; overflow: hidden;">
+                <img src="picture/ngo/about-youth.jpg" alt="青年培訓" style="width:100%; height:100%; object-fit:cover;">
               </div>
-              <p class="y-medium y-text-dark-grey" style="line-height: 1.8; margin: 0;">
-                提供職前培訓、軟技能發展及多元化的社會實踐機會，幫助青年人建立職涯競爭力與自信心。
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Focus 2: Re-entry -->
-        <div class="y-half y-margin-bottom">
-          <div class="y-white y-round-large y-card-2" style="overflow: hidden; height: 100%;">
-            <div style="aspect-ratio: 16/9; overflow: hidden;">
-              <img src="picture/ngo/about-reentry.jpg" alt="再投身社會人士" style="width:100%; height:100%; object-fit:cover;">
-            </div>
-            <div style="padding: 28px 24px;">
-              <div class="y-xlarge y-text-pink y-bold" style="margin-bottom: 12px;">
-                <i class="fa-solid fa-handshake-angle y-margin-right"></i>再投身社會人士
+              <div style="padding: 28px 24px;">
+                <div class="y-xlarge y-text-pink y-bold" style="margin-bottom: 12px;">
+                  <i class="fa-solid fa-seedling y-margin-right"></i>青年人培育
+                </div>
+                <p class="y-medium y-text-dark-grey" style="line-height: 1.8; margin: 0;">
+                  提供職前培訓、軟技能發展及多元化的社會實踐機會，幫助青年人建立職涯競爭力與自信心。
+                </p>
               </div>
-              <p class="y-medium y-text-dark-grey" style="line-height: 1.8; margin: 0;">
-                協助重建職業能力、加強社區網絡連結與重新實現自我價值，讓每位成員順利重返職場與社區。
-              </p>
+            </div>
+          </div>
+
+          <!-- Focus 2: Re-entry -->
+          <div class="y-half y-margin-bottom">
+            <div class="y-white y-round-large y-card-2" style="overflow: hidden; height: 100%;">
+              <div style="aspect-ratio: 16/9; overflow: hidden;">
+                <img src="picture/ngo/about-reentry.jpg" alt="再投身社會人士" style="width:100%; height:100%; object-fit:cover;">
+              </div>
+              <div style="padding: 28px 24px;">
+                <div class="y-xlarge y-text-pink y-bold" style="margin-bottom: 12px;">
+                  <i class="fa-solid fa-handshake-angle y-margin-right"></i>再投身社會人士
+                </div>
+                <p class="y-medium y-text-dark-grey" style="line-height: 1.8; margin: 0;">
+                  協助重建職業能力、加強社區網絡連結與重新實現自我價值，讓每位成員順利重返職場與社區。
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- SECTION 2: 運作模式 -->
+      <div class="y-white y-round-large y-card-2 y-margin-bottom" style="margin-top: 40px; padding: 36px 28px;">
+        <h2 class="y-center y-xxlarge y-bold y-text-pink" style="margin-bottom: 8px;">
+          <i class="fa-solid fa-arrows-spin y-margin-right"></i>運作模式
+        </h2>
+        <p class="y-center y-medium y-text-grey" style="margin-bottom: 28px;">循環升級機制：「培訓 — 實踐 — 反思」</p>
+
+        <div class="y-row-padding y-flex y-flex-wrap y-items-stretch">
+          <!-- Step 1 -->
+          <div class="y-third y-margin-bottom">
+            <div class="y-round-large y-light-grey y-center" style="height: 100%; border: 2px dashed #f48fb1; padding: 24px 16px;">
+              <div class="y-pink y-text-white y-circle y-bold y-xlarge" style="width: 48px; height: 48px; line-height: 48px; margin: 0 auto 16px auto;">1</div>
+              <h3 class="y-large y-bold y-text-pink" style="margin-bottom: 10px;">培訓階段</h3>
+              <p class="y-medium y-text-dark-grey" style="line-height: 1.6; margin: 0;">專業技能課堂及良好職務心態準備</p>
+            </div>
+          </div>
+          <!-- Step 2 -->
+          <div class="y-third y-margin-bottom">
+            <div class="y-round-large y-light-grey y-center" style="height: 100%; border: 2px dashed #f48fb1; padding: 24px 16px;">
+              <div class="y-pink y-text-white y-circle y-bold y-xlarge" style="width: 48px; height: 48px; line-height: 48px; margin: 0 auto 16px auto;">2</div>
+              <h3 class="y-large y-bold y-text-pink" style="margin-bottom: 10px;">實踐階段</h3>
+              <p class="y-medium y-text-dark-grey" style="line-height: 1.6; margin: 0;">走入真實社區場景與前線服務應用</p>
+            </div>
+          </div>
+          <!-- Step 3 -->
+          <div class="y-third y-margin-bottom">
+            <div class="y-round-large y-light-grey y-center" style="height: 100%; border: 2px dashed #f48fb1; padding: 24px 16px;">
+              <div class="y-pink y-text-white y-circle y-bold y-xlarge" style="width: 48px; height: 48px; line-height: 48px; margin: 0 auto 16px auto;">3</div>
+              <h3 class="y-large y-bold y-text-pink" style="margin-bottom: 10px;">反思階段</h3>
+              <p class="y-medium y-text-dark-grey" style="line-height: 1.6; margin: 0;">專業導師一對一督導與持續技能優化</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 3: 服務形式 & 服務對象 -->
+      <div class="y-row-padding y-margin-bottom" style="margin-top: 40px;">
+        <!-- Services Formats -->
+        <div class="y-half y-margin-bottom">
+          <div class="y-white y-round-large y-card-2" style="height: 100%; padding: 32px 28px;">
+            <h3 class="y-xlarge y-bold y-text-pink y-border-bottom y-border-pink" style="display:inline-block; padding-bottom: 8px; margin-bottom: 24px;">
+              <i class="fa-solid fa-shapes y-margin-right"></i>服務形式
+            </h3>
+            <div class="y-flex y-flex-column y-gap-16">
+              <div class="y-light-grey y-round-large y-flex y-items-center y-gap-16" style="padding: 16px 20px;">
+                <span class="y-pink y-text-white y-circle y-center" style="width:40px; height:40px; line-height:40px; flex-shrink:0;"><i class="fa-solid fa-palette"></i></span>
+                <div><b>創意手作班</b><br><span class="y-small y-text-dark-grey">激發創意與手部協調技能</span></div>
+              </div>
+              <div class="y-light-grey y-round-large y-flex y-items-center y-gap-16" style="padding: 16px 20px;">
+                <span class="y-pink y-text-white y-circle y-center" style="width:40px; height:40px; line-height:40px; flex-shrink:0;"><i class="fa-solid fa-mountain"></i></span>
+                <div><b>歷奇訓練</b><br><span class="y-small y-text-dark-grey">培育團隊合作與突破心理障礙</span></div>
+              </div>
+              <div class="y-light-grey y-round-large y-flex y-items-center y-gap-16" style="padding: 16px 20px;">
+                <span class="y-pink y-text-white y-circle y-center" style="width:40px; height:40px; line-height:40px; flex-shrink:0;"><i class="fa-solid fa-heart"></i></span>
+                <div><b>關懷探訪</b><br><span class="y-small y-text-dark-grey">將溫暖與愛心帶入社群</span></div>
+              </div>
+              <div class="y-light-grey y-round-large y-flex y-items-center y-gap-16" style="padding: 16px 20px;">
+                <span class="y-pink y-text-white y-circle y-center" style="width:40px; height:40px; line-height:40px; flex-shrink:0;"><i class="fa-solid fa-clipboard-list"></i></span>
+                <div><b>活動協辦</b><br><span class="y-small y-text-dark-grey">支援多元化的社會服務項目</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Target Audiences -->
+        <div class="y-half y-margin-bottom">
+          <div class="y-white y-round-large y-card-2" style="height: 100%; padding: 32px 28px;">
+            <h3 class="y-xlarge y-bold y-text-pink y-border-bottom y-border-pink" style="display:inline-block; padding-bottom: 8px; margin-bottom: 24px;">
+              <i class="fa-solid fa-users y-margin-right"></i>服務對象
+            </h3>
+            <div class="y-flex y-flex-column y-gap-16">
+              <div class="y-light-grey y-round-large y-flex y-items-center y-gap-16" style="padding: 16px 20px;">
+                <span class="y-pink y-text-white y-circle y-center" style="width:40px; height:40px; line-height:40px; flex-shrink:0;"><i class="fa-solid fa-house-medical"></i></span>
+                <div><b>長者服務機構</b><br><span class="y-small y-text-dark-grey">護老院、長者日間中心、安老服務單位</span></div>
+              </div>
+              <div class="y-light-grey y-round-large y-flex y-items-center y-gap-16" style="padding: 16px 20px;">
+                <span class="y-pink y-text-white y-circle y-center" style="width:40px; height:40px; line-height:40px; flex-shrink:0;"><i class="fa-solid fa-city"></i></span>
+                <div><b>社區組織</b><br><span class="y-small y-text-dark-grey">社區中心、鄰里互助網絡</span></div>
+              </div>
+              <div class="y-light-grey y-round-large y-flex y-items-center y-gap-16" style="padding: 16px 20px;">
+                <span class="y-pink y-text-white y-circle y-center" style="width:40px; height:40px; line-height:40px; flex-shrink:0;"><i class="fa-solid fa-school"></i></span>
+                <div><b>教育相關群體</b><br><span class="y-small y-text-dark-grey">家長、學生、學校及教育機構</span></div>
+              </div>
+              <div class="y-light-grey y-round-large y-flex y-items-center y-gap-16" style="padding: 16px 20px;">
+                <span class="y-pink y-text-white y-circle y-center" style="width:40px; height:40px; line-height:40px; flex-shrink:0;"><i class="fa-solid fa-people-roof"></i></span>
+                <div><b>跨代社群</b><br><span class="y-small y-text-dark-grey">促進不同年齡層之間的互動與理解</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MIDDLE IMAGE GALLERY / BANNER SLOT -->
+      <div class="y-card y-round-large y-margin-bottom" style="overflow: hidden; aspect-ratio: 21/9; width: 100%;">
+        <img src="picture/ngo/about-gallery.jpg" alt="活動花絮" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+
+      <!-- SECTION 4: 社會影響 -->
+      <div class="y-margin-bottom" style="margin-top: 56px;">
+        <h2 class="y-center y-xxlarge y-bold y-text-pink" style="margin-bottom: 36px;">
+          <i class="fa-solid fa-chart-line y-margin-right"></i>社會影響
+        </h2>
+        
+        <div class="y-row-padding">
+          <div class="y-third y-margin-bottom">
+            <div class="y-white y-round-large y-card-2 y-center" style="height: 100%; border-bottom: 4px solid #e91e63; padding: 32px 20px;">
+              <i class="fa-solid fa-user-graduate y-jumbo y-text-pink y-margin-bottom"></i>
+              <h3 class="y-large y-bold y-text-black" style="margin-bottom: 12px;">對學員</h3>
+              <p class="y-medium y-text-dark-grey" style="line-height: 1.6; margin: 0;">提升就業能力<br>重建社會連結<br>增強個人自信心</p>
+            </div>
+          </div>
+
+          <div class="y-third y-margin-bottom">
+            <div class="y-white y-round-large y-card-2 y-center" style="height: 100%; border-bottom: 4px solid #e91e63; padding: 32px 20px;">
+              <i class="fa-solid fa-face-smile y-jumbo y-text-pink y-margin-bottom"></i>
+              <h3 class="y-large y-bold y-text-black" style="margin-bottom: 12px;">對服務對象</h3>
+              <p class="y-medium y-text-dark-grey" style="line-height: 1.6; margin: 0;">獲得優質活動體驗<br>減少社會隔閡<br>提升生活質素</p>
+            </div>
+          </div>
+
+          <div class="y-third y-margin-bottom">
+            <div class="y-white y-round-large y-card-2 y-center" style="height: 100%; border-bottom: 4px solid #e91e63; padding: 32px 20px;">
+              <i class="fa-solid fa-hands-holding-circle y-jumbo y-text-pink y-margin-bottom"></i>
+              <h3 class="y-large y-bold y-text-black" style="margin-bottom: 12px;">對社區</h3>
+              <p class="y-medium y-text-dark-grey" style="line-height: 1.6; margin: 0;">促進跨代共融<br>建立支持網絡<br>創造共享價值</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 5: 合作優勢 & CTA -->
+      <div class="y-white y-round-large y-card-2 y-margin-bottom" style="margin-top: 40px; padding: 36px 28px;">
+        <h2 class="y-center y-xxlarge y-bold y-text-pink" style="margin-bottom: 32px;">
+          <i class="fa-solid fa-handshake y-margin-right"></i>合作優勢
+        </h2>
+        
+        <div class="y-row-padding">
+          <div class="y-third y-margin-bottom y-center">
+            <div class="y-round-large y-light-grey" style="padding: 20px 16px;">
+              <h3 class="y-large y-bold y-text-black" style="margin-bottom:6px;">對機構</h3>
+              <p class="y-small y-text-dark-grey" style="margin:0;">專業設計活動方案及額外人手支援</p>
+            </div>
+          </div>
+          <div class="y-third y-margin-bottom y-center">
+            <div class="y-round-large y-light-grey" style="padding: 20px 16px;">
+              <h3 class="y-large y-bold y-text-black" style="margin-bottom:6px;">對學員</h3>
+              <p class="y-small y-text-dark-grey" style="margin:0;">獲得實戰經驗及專業導師指導</p>
+            </div>
+          </div>
+          <div class="y-third y-margin-bottom y-center">
+            <div class="y-round-large y-light-grey" style="padding: 20px 16px;">
+              <h3 class="y-large y-bold y-text-black" style="margin-bottom:6px;">對社區</h3>
+              <p class="y-small y-text-dark-grey" style="margin:0;">建立可持續的社會服務共融生態</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Button -->
+        <div class="y-center" style="margin-top: 28px !important;">
+          <a href="contact.html" class="button">
+            <i class="fa-solid fa-comments button__icon"></i>
+            <span>與我們洽談合作</span>
+          </a>
+        </div>
+      </div>
+
     </div>
+  </div> <!-- END .bubble-content -->
 
-    <!-- SECTION 2: 運作模式 (VISUAL STEP PIPELINE) -->
-    <div class="y-white y-round-large y-card-2 y-margin-bottom" style="margin-top: 40px; padding: 36px 28px;">
-      <h2 class="y-center y-xxlarge y-bold y-text-pink" style="margin-bottom: 8px;">
-        <i class="fa-solid fa-arrows-spin y-margin-right"></i>運作模式
-      </h2>
-      <p class="y-center y-medium y-text-grey" style="margin-bottom: 28px;">循環升級機制：「培訓 — 實踐 — 反思」</p>
-
-      <div class="y-row-padding y-flex y-flex-wrap y-items-stretch">
-        <!-- Step 1 -->
-        <div class="y-third y-margin-bottom">
-          <div class="y-round-large y-light-grey y-center" style="height: 100%; border: 2px dashed #f48fb1; padding: 24px 16px;">
-            <div class="y-pink y-text-white y-circle y-bold y-xlarge" style="width: 48px; height: 48px; line-height: 48px; margin: 0 auto 16px auto;">1</div>
-            <h3 class="y-large y-bold y-text-pink" style="margin-bottom: 10px;">培訓階段</h3>
-            <p class="y-medium y-text-dark-grey" style="line-height: 1.6; margin: 0;">專業技能課堂及良好職務心態準備</p>
-          </div>
-        </div>
-        <!-- Step 2 -->
-        <div class="y-third y-margin-bottom">
-          <div class="y-round-large y-light-grey y-center" style="height: 100%; border: 2px dashed #f48fb1; padding: 24px 16px;">
-            <div class="y-pink y-text-white y-circle y-bold y-xlarge" style="width: 48px; height: 48px; line-height: 48px; margin: 0 auto 16px auto;">2</div>
-            <h3 class="y-large y-bold y-text-pink" style="margin-bottom: 10px;">實踐階段</h3>
-            <p class="y-medium y-text-dark-grey" style="line-height: 1.6; margin: 0;">走入真實社區場景與前線服務應用</p>
-          </div>
-        </div>
-        <!-- Step 3 -->
-        <div class="y-third y-margin-bottom">
-          <div class="y-round-large y-light-grey y-center" style="height: 100%; border: 2px dashed #f48fb1; padding: 24px 16px;">
-            <div class="y-pink y-text-white y-circle y-bold y-xlarge" style="width: 48px; height: 48px; line-height: 48px; margin: 0 auto 16px auto;">3</div>
-            <h3 class="y-large y-bold y-text-pink" style="margin-bottom: 10px;">反思階段</h3>
-            <p class="y-medium y-text-dark-grey" style="line-height: 1.6; margin: 0;">專業導師一對一督導與持續技能優化</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 3: 服務形式 & 服務對象 (PILL/TAG STYLE + IMAGE BANNER) -->
-    <div class="y-row-padding y-margin-bottom" style="margin-top: 40px;">
-      <!-- Services Formats -->
-      <div class="y-half y-margin-bottom">
-        <div class="y-white y-round-large y-card-2" style="height: 100%; padding: 32px 28px;">
-          <h3 class="y-xlarge y-bold y-text-pink y-border-bottom y-border-pink" style="display:inline-block; padding-bottom: 8px; margin-bottom: 24px;">
-            <i class="fa-solid fa-shapes y-margin-right"></i>服務形式
-          </h3>
-          <div class="y-flex y-flex-column y-gap-16">
-            <div class="y-light-grey y-round-large y-flex y-items-center y-gap-16" style="padding: 16px 20px;">
-              <span class="y-pink y-text-white y-circle y-center" style="width:40px; height:40px; line-height:40px; flex-shrink:0;"><i class="fa-solid fa-palette"></i></span>
-              <div><b>創意手作班</b><br><span class="y-small y-text-dark-grey">激發創意與手部協調技能</span></div>
-            </div>
-            <div class="y-light-grey y-round-large y-flex y-items-center y-gap-16" style="padding: 16px 20px;">
-              <span class="y-pink y-text-white y-circle y-center" style="width:40px; height:40px; line-height:40px; flex-shrink:0;"><i class="fa-solid fa-mountain"></i></span>
-              <div><b>歷奇訓練</b><br><span class="y-small y-text-dark-grey">培育團隊合作與突破心理障礙</span></div>
-            </div>
-            <div class="y-light-grey y-round-large y-flex y-items-center y-gap-16" style="padding: 16px 20px;">
-              <span class="y-pink y-text-white y-circle y-center" style="width:40px; height:40px; line-height:40px; flex-shrink:0;"><i class="fa-solid fa-heart"></i></span>
-              <div><b>關懷探訪</b><br><span class="y-small y-text-dark-grey">將溫暖與愛心帶入社群</span></div>
-            </div>
-            <div class="y-light-grey y-round-large y-flex y-items-center y-gap-16" style="padding: 16px 20px;">
-              <span class="y-pink y-text-white y-circle y-center" style="width:40px; height:40px; line-height:40px; flex-shrink:0;"><i class="fa-solid fa-clipboard-list"></i></span>
-              <div><b>活動協辦</b><br><span class="y-small y-text-dark-grey">支援多元化的社會服務項目</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Target Audiences -->
-      <div class="y-half y-margin-bottom">
-        <div class="y-white y-round-large y-card-2" style="height: 100%; padding: 32px 28px;">
-          <h3 class="y-xlarge y-bold y-text-pink y-border-bottom y-border-pink" style="display:inline-block; padding-bottom: 8px; margin-bottom: 24px;">
-            <i class="fa-solid fa-users y-margin-right"></i>服務對象
-          </h3>
-          <div class="y-flex y-flex-column y-gap-16">
-            <div class="y-light-grey y-round-large y-flex y-items-center y-gap-16" style="padding: 16px 20px;">
-              <span class="y-pink y-text-white y-circle y-center" style="width:40px; height:40px; line-height:40px; flex-shrink:0;"><i class="fa-solid fa-house-medical"></i></span>
-              <div><b>長者服務機構</b><br><span class="y-small y-text-dark-grey">護老院、長者日間中心、安老服務單位</span></div>
-            </div>
-            <div class="y-light-grey y-round-large y-flex y-items-center y-gap-16" style="padding: 16px 20px;">
-              <span class="y-pink y-text-white y-circle y-center" style="width:40px; height:40px; line-height:40px; flex-shrink:0;"><i class="fa-solid fa-city"></i></span>
-              <div><b>社區組織</b><br><span class="y-small y-text-dark-grey">社區中心、鄰里互助網絡</span></div>
-            </div>
-            <div class="y-light-grey y-round-large y-flex y-items-center y-gap-16" style="padding: 16px 20px;">
-              <span class="y-pink y-text-white y-circle y-center" style="width:40px; height:40px; line-height:40px; flex-shrink:0;"><i class="fa-solid fa-school"></i></span>
-              <div><b>教育相關群體</b><br><span class="y-small y-text-dark-grey">家長、學生、學校及教育機構</span></div>
-            </div>
-            <div class="y-light-grey y-round-large y-flex y-items-center y-gap-16" style="padding: 16px 20px;">
-              <span class="y-pink y-text-white y-circle y-center" style="width:40px; height:40px; line-height:40px; flex-shrink:0;"><i class="fa-solid fa-people-roof"></i></span>
-              <div><b>跨代社群</b><br><span class="y-small y-text-dark-grey">促進不同年齡層之間的互動與理解</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MIDDLE IMAGE GALLERY / BANNER SLOT -->
-    <div class="y-card y-round-large y-margin-bottom" style="overflow: hidden; aspect-ratio: 21/9; width: 100%;">
-      <img src="picture/ngo/about-gallery.jpg" alt="活動花絮" style="width:100%; height:100%; object-fit:cover;">
-    </div>
-
-    <!-- SECTION 4: 社會影響 (STATS-STYLE CARDS) -->
-    <div class="y-margin-bottom" style="margin-top: 56px;">
-      <h2 class="y-center y-xxlarge y-bold y-text-pink" style="margin-bottom: 36px;">
-        <i class="fa-solid fa-chart-line y-margin-right"></i>社會影響
-      </h2>
-      
-      <div class="y-row-padding">
-        <div class="y-third y-margin-bottom">
-          <div class="y-white y-round-large y-card-2 y-center" style="height: 100%; border-bottom: 4px solid #e91e63; padding: 32px 20px;">
-            <i class="fa-solid fa-user-graduate y-jumbo y-text-pink y-margin-bottom"></i>
-            <h3 class="y-large y-bold y-text-black" style="margin-bottom: 12px;">對學員</h3>
-            <p class="y-medium y-text-dark-grey" style="line-height: 1.6; margin: 0;">提升就業能力<br>重建社會連結<br>增強個人自信心</p>
-          </div>
-        </div>
-
-        <div class="y-third y-margin-bottom">
-          <div class="y-white y-round-large y-card-2 y-center" style="height: 100%; border-bottom: 4px solid #e91e63; padding: 32px 20px;">
-            <i class="fa-solid fa-face-smile y-jumbo y-text-pink y-margin-bottom"></i>
-            <h3 class="y-large y-bold y-text-black" style="margin-bottom: 12px;">對服務對象</h3>
-            <p class="y-medium y-text-dark-grey" style="line-height: 1.6; margin: 0;">獲得優質活動體驗<br>減少社會隔閡<br>提升生活質素</p>
-          </div>
-        </div>
-
-        <div class="y-third y-margin-bottom">
-          <div class="y-white y-round-large y-card-2 y-center" style="height: 100%; border-bottom: 4px solid #e91e63; padding: 32px 20px;">
-            <i class="fa-solid fa-hands-holding-circle y-jumbo y-text-pink y-margin-bottom"></i>
-            <h3 class="y-large y-bold y-text-black" style="margin-bottom: 12px;">對社區</h3>
-            <p class="y-medium y-text-dark-grey" style="line-height: 1.6; margin: 0;">促進跨代共融<br>建立支持網絡<br>創造共享價值</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 5: 合作優勢 & CTA -->
-    <div class="y-white y-round-large y-card-2 y-margin-bottom" style="margin-top: 40px; padding: 36px 28px;">
-      <h2 class="y-center y-xxlarge y-bold y-text-pink" style="margin-bottom: 32px;">
-        <i class="fa-solid fa-handshake y-margin-right"></i>合作優勢
-      </h2>
-      
-      <div class="y-row-padding">
-        <div class="y-third y-margin-bottom y-center">
-          <div class="y-round-large y-light-grey" style="padding: 20px 16px;">
-            <h3 class="y-large y-bold y-text-black" style="margin-bottom:6px;">對機構</h3>
-            <p class="y-small y-text-dark-grey" style="margin:0;">專業設計活動方案及額外人手支援</p>
-          </div>
-        </div>
-        <div class="y-third y-margin-bottom y-center">
-          <div class="y-round-large y-light-grey" style="padding: 20px 16px;">
-            <h3 class="y-large y-bold y-text-black" style="margin-bottom:6px;">對學員</h3>
-            <p class="y-small y-text-dark-grey" style="margin:0;">獲得實戰經驗及專業導師指導</p>
-          </div>
-        </div>
-        <div class="y-third y-margin-bottom y-center">
-          <div class="y-round-large y-light-grey" style="padding: 20px 16px;">
-            <h3 class="y-large y-bold y-text-black" style="margin-bottom:6px;">對社區</h3>
-            <p class="y-small y-text-dark-grey" style="margin:0;">建立可持續的社會服務共融生態</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Action Button -->
-      <div class="y-center" style="margin-top: 28px !important;">
-        <a href="contact.html" class="button">
-          <i class="fa-solid fa-comments button__icon"></i>
-          <span>與我們洽談合作</span>
-        </a>
-      </div>
-    </div>
-
-  </div>
-</div>
-
+</div> <!-- END .pure-css-bubbles -->
 
 <!-- ================= FOOTER ================= -->
 <footer class="y-container y-xlarge y-padding-32 y-white">  
   <div class="y-auto">
     <div class="y-row-padding">
 
-      <!-- Left Column: Info (Full width on mobile) -->
+      <!-- Left Column: Info -->
       <div class="y-third y-margin-bottom">
         <h3 class="y-bold y-border-bottom y-border-pink y-text-pink" style="display:inline-block; padding-bottom: 4px;">
           INFO
@@ -325,7 +333,7 @@
         </p>        
       </div>
       
-      <!-- Centre Column: Contact (Left side of Row 2 on mobile) -->
+      <!-- Centre Column: Contact -->
       <div class="y-third y-margin-bottom">
         <h3 class="y-bold y-border-bottom y-border-pink y-text-pink" style="display:inline-block; padding-bottom: 4px;">
           CONTACT
@@ -337,19 +345,16 @@
         </p>
       </div>
       
-      <!-- Right Column: Social Media (Right side of Row 2 on mobile) -->
+      <!-- Right Column: Social Media -->
       <div class="y-third y-margin-bottom">
         <h3 class="y-bold y-border-bottom y-border-pink y-text-pink" style="display:inline-block; padding-bottom: 4px;">
           Social Media
         </h3>
         
         <div class="y-flex y-gap-16 y-margin-top y-flex-wrap">
-          <!-- Facebook -->
           <a href="https://facebook.com" target="_blank" class="social-icon facebook">
             <i class="fa-brands fa-facebook-f"></i>
           </a>
-          
-          <!-- Instagram -->
           <a href="https://instagram.com" target="_blank" class="social-icon instagram">
             <i class="fa-brands fa-instagram"></i>
           </a>  
