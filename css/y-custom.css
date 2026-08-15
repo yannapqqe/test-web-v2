@@ -160,13 +160,26 @@ h6 {
 jpg');
 }
 
+/* ================= HERO HEADER FIXES ================= */
 .hero-header {
     width: 100%;
-    min-height: 70vh;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+    min-height: 450px; /* Ensures header has visible height on all devices */
+    height: 60vh;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    position: relative;
 }
+
+/* Page Specific Hero Classes */
+.hero-bg-about {
+    background-image: url('../picture/ngo/heading-text.jpg') !important;
+}
+
+.hero-bg-members {
+    background-image: url('../picture/ngo/members-hero.jpg') !important;
+}
+
 
 /*-----------------------------------------------------------------*/
 
