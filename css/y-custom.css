@@ -1120,91 +1120,91 @@ textarea.y-input {
 }
 
 /* =================================================================
-   UNIVERSAL BUBBLE ALIGNMENT FIX FOR ALL PAGES (BIGGER BUBBLES)
+   UNIVERSAL BUBBLE ALIGNMENT & DEPLOYMENT FIX (FULL STYLESHEET)
    ================================================================= */
 
-/* Ensure the outer wrapper spans full width on all pages */
+/* 1. Main Outer Wrapper */
 .pure-css-bubbles {
   position: relative !important;
   width: 100% !important;
-  max-width: 100% !important;
+  min-height: 100vh !important; /* Prevents height collapse on GitHub */
   box-sizing: border-box;
   overflow: hidden;
-  isolation: isolate;
+  isolation: isolate;           /* Keeps z-indexes isolated cleanly */
 }
 
-/* Force bubble background layers to stay consistent in height scale */
+/* 2. Base Pseudo-Elements for Background Layers */
 .pure-css-bubbles::before,
 .pure-css-bubbles::after {
-  content: "";
+  content: "" !important;
   position: absolute !important;
   top: 0 !important;
   left: 0 !important;
   width: 100% !important;
   height: 100% !important;
   pointer-events: none;
-  z-index: -1;
+  z-index: 0 !important;        /* Fixed: 0 prevents solid backgrounds from hiding bubbles */
 
   /* Locks percentage calculations to a fixed tile height */
   background-size: 100% 1000px !important;
   background-repeat: repeat-y !important;
 }
 
-/* Ensure inner content containers sit cleanly on top of bubbles */
-.pure-css-bubbles > .y-auto,
+/* 3. Ensure Inner Content Container Sits Strictly Above Bubbles */
+.pure-css-bubbles > *,
+.pure-css-bubbles .y-auto,
 .pure-css-bubbles .y-container {
   position: relative !important;
-  z-index: 1 !important;
+  z-index: 2 !important;        /* Moves content clearly above z-index: 0 */
 }
 
 /*-----------------------------------------------------------------*/
-/* REALISTIC SOAP BUBBLES - EXPANDED / BIGGER SIZES                */
+/* REALISTIC SOAP BUBBLES - DESKTOP LAYERS & ANIMATIONS           */
 /*-----------------------------------------------------------------*/
 
-/* Layer 1: INNER BUBBLES (Scaled Up ~60%) */
+/* Layer 1: INNER BUBBLES */
 .pure-css-bubbles::before {
   background-image: 
     /* --- LEFT SIDE INNER --- */
-    /* Blue Rim (Left 16%, Top 55%) - Enlarged */
+    /* Blue Rim */
     radial-gradient(circle at 16% 550px, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.1) 55px, rgba(179, 229, 252, 0.7) 67px, rgba(3, 169, 244, 0.3) 72px, transparent 77px),
     
-    /* Large Peach Rim (Left 22%, Top 35%) - Enlarged */
+    /* Large Peach Rim */
     radial-gradient(circle at 22% 350px, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.1) 130px, rgba(255, 224, 178, 0.8) 141px, rgba(255, 152, 0, 0.25) 146px, transparent 151px),
 
     /* --- RIGHT SIDE INNER --- */
-    /* Mint Rim (Right 80%, Top 65%) - Enlarged */
+    /* Mint Rim */
     radial-gradient(circle at 80% 650px, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.1) 65px, rgba(178, 223, 219, 0.7) 74px, rgba(0, 150, 136, 0.3) 78px, transparent 83px),
     
-    /* Sky Blue Rim (Right 82%, Top 80%) - Enlarged */
+    /* Sky Blue Rim */
     radial-gradient(circle at 82% 800px, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.1) 95px, rgba(179, 229, 252, 0.8) 107px, rgba(3, 169, 244, 0.3) 112px, transparent 117px);
 
-  /* Ultra-slow 40-second loop */
+  /* Slow 40-second float loop */
   animation: floatAndPulseTight 40s ease-in-out infinite alternate;
 }
 
-/* Layer 2: EDGE ACCENT BUBBLES (Scaled Up ~60%) */
+/* Layer 2: EDGE ACCENT BUBBLES */
 .pure-css-bubbles::after {
   background-image: 
     /* --- LEFT SIDE OUTER EDGE --- */
-    /* Pink Rim (Left 12%, Top 20%) - Enlarged */
+    /* Pink Rim */
     radial-gradient(circle at 12% 200px, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.1) 80px, rgba(255, 182, 193, 0.7) 96px, rgba(255, 105, 180, 0.4) 101px, transparent 106px),
     
-    /* Lavender Rim (Left 14%, Top 75%) - Enlarged */
+    /* Lavender Rim */
     radial-gradient(circle at 14% 750px, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.1) 88px, rgba(225, 190, 231, 0.7) 99px, rgba(156, 39, 176, 0.3) 104px, transparent 109px),
 
     /* --- RIGHT SIDE OUTER EDGE --- */
-    /* White/Pink Rim (Right 86%, Top 25%) - Enlarged */
+    /* White/Pink Rim */
     radial-gradient(circle at 86% 250px, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.15) 112px, rgba(255, 205, 210, 0.8) 122px, rgba(233, 30, 99, 0.3) 127px, transparent 132px),
     
-    /* Purple Rim (Right 88%, Top 50%) - Enlarged */
+    /* Purple Rim */
     radial-gradient(circle at 88% 500px, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.1) 48px, rgba(209, 196, 233, 0.7) 58px, rgba(103, 58, 183, 0.25) 62px, transparent 67px);
 
-  /* Ultra-slow 56-second loop */
+  /* Slow 56-second float loop */
   animation: pulseSubtleOnly 56s ease-in-out infinite alternate;
 }
 
-/* --- ANIMATIONS WITH HIGHER SCALE BOUNDS --- */
-
+/* Keyframes for Desktop Animations */
 @keyframes floatAndPulseTight {
   0% {
     transform: translateY(-4px) scale(1.05);
@@ -1248,7 +1248,7 @@ textarea.y-input {
 }
 
 /*-----------------------------------------------------------------*/
-/* MOBILE BUBBLE FIXES (<= 768px) - BALANCED DENSITY               */
+/* MOBILE BUBBLE FIXES (<= 768px) - SINGLE CLEAN LAYER             */
 /*-----------------------------------------------------------------*/
 @keyframes floatBubbleMobile {
   0%, 100% {
@@ -1260,25 +1260,23 @@ textarea.y-input {
 }
 
 @media screen and (max-width: 768px) {
-  /* Disable second layer to prevent clutter */
+  /* Disable second layer on mobile to avoid screen clutter */
   .pure-css-bubbles::after {
     display: none !important;
   }
 
   .pure-css-bubbles::before {
     content: "" !important;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
     pointer-events: none;
-    z-index: 0;
+    z-index: 0 !important;
 
-    /* Subtle upward-and-down motion */
     animation: floatBubbleMobile 7s ease-in-out infinite;
 
-    /* Repeats seamlessly every 800px down the page */
     background-size: 100% 800px !important;
     background-repeat: repeat-y !important;
 
