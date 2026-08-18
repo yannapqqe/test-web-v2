@@ -1647,20 +1647,26 @@ textarea.y-input {
   }
 }
 
-
-
 /* 5. Mobile Optimization (<= 768px) */
-@keyframes floatBubbleMobile {
+@keyframes floatAndPulseMobile {
   0% {
-    transform: translateY(0px);
+    transform: translateY(-4px) scale(1.02);
     filter: hue-rotate(0deg);
   }
-  50% {
-    transform: translateY(-10px);
-    filter: hue-rotate(180deg);
+  30% {
+    transform: translateY(2px) scale(1.08);
+    filter: hue-rotate(100deg);
+  }
+  60% {
+    transform: translateY(-2px) scale(1.0);
+    filter: hue-rotate(220deg);
+  }
+  85% {
+    transform: translateY(5px) scale(1.1);
+    filter: hue-rotate(310deg);
   }
   100% {
-    transform: translateY(0px);
+    transform: translateY(-1px) scale(1.04);
     filter: hue-rotate(360deg);
   }
 }
@@ -1668,12 +1674,18 @@ textarea.y-input {
 @media screen and (max-width: 768px) {
   .bubble-bg-layer {
     background-size: 100% 800px !important;
-    animation: floatBubbleMobile 12s ease-in-out infinite;
-    /* keep your radial-gradients below */
+    animation: floatAndPulseMobile 20s ease-in-out infinite alternate !important;
     background-image: 
-      radial-gradient(circle at 12% 140px, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.15) 30px, rgba(255, 182, 193, 0.6) 42px, rgba(255, 105, 180, 0.2) 46px, transparent 49px),
-      radial-gradient(circle at 86% 320px, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.15) 25px, rgba(179, 229, 252, 0.6) 36px, rgba(3, 169, 244, 0.2) 40px, transparent 43px),
-      radial-gradient(circle at 15% 520px, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.15) 35px, rgba(255, 224, 178, 0.65) 48px, rgba(255, 152, 0, 0.2) 52px, transparent 55px),
-      radial-gradient(circle at 84% 680px, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.15) 28px, rgba(225, 190, 231, 0.6) 40px, rgba(156, 39, 176, 0.2) 44px, transparent 47px) !important;
+      /* --- LEFT SIDE BUBBLES --- */
+      radial-gradient(circle at 16% 400px, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.1) 35px, rgba(179, 229, 252, 0.7) 47px, rgba(3, 169, 244, 0.3) 52px, transparent 57px),
+      radial-gradient(circle at 22% 250px, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.1) 80px, rgba(255, 224, 178, 0.8) 91px, rgba(255, 152, 0, 0.25) 96px, transparent 101px),
+      radial-gradient(circle at 12% 120px, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.1) 50px, rgba(255, 182, 193, 0.7) 66px, rgba(255, 105, 180, 0.4) 71px, transparent 76px),
+      radial-gradient(circle at 14% 600px, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.1) 60px, rgba(225, 190, 231, 0.7) 71px, rgba(156, 39, 176, 0.3) 76px, transparent 81px),
+
+      /* --- RIGHT SIDE BUBBLES --- */
+      radial-gradient(circle at 80% 480px, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.1) 45px, rgba(178, 223, 219, 0.7) 54px, rgba(0, 150, 136, 0.3) 58px, transparent 63px),
+      radial-gradient(circle at 82% 680px, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.1) 65px, rgba(179, 229, 252, 0.8) 77px, rgba(3, 169, 244, 0.3) 82px, transparent 87px),
+      radial-gradient(circle at 86% 180px, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.15) 75px, rgba(255, 205, 210, 0.8) 85px, rgba(233, 30, 99, 0.3) 90px, transparent 95px),
+      radial-gradient(circle at 88% 360px, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.1) 32px, rgba(209, 196, 233, 0.7) 42px, rgba(103, 58, 183, 0.25) 46px, transparent 51px) !important;
   }
 }
