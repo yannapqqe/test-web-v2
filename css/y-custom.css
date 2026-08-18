@@ -1649,14 +1649,24 @@ textarea.y-input {
 
 /* 5. Mobile Optimization (<= 768px) */
 @keyframes floatBubbleMobile {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  0% {
+    transform: translateY(0px);
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px);
+    filter: hue-rotate(180deg);
+  }
+  100% {
+    transform: translateY(0px);
+    filter: hue-rotate(360deg);
+  }
 }
 
 @media screen and (max-width: 768px) {
   .bubble-bg-layer {
     background-size: 100% 800px !important;
-    animation: floatBubbleMobile 7s ease-in-out infinite;
+    animation: floatBubbleMobile 12s ease-in-out infinite;
     background-image: 
       radial-gradient(circle at 12% 140px, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.15) 30px, rgba(255, 182, 193, 0.6) 42px, rgba(255, 105, 180, 0.2) 46px, transparent 49px),
       radial-gradient(circle at 86% 320px, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.15) 25px, rgba(179, 229, 252, 0.6) 36px, rgba(3, 169, 244, 0.2) 40px, transparent 43px),
