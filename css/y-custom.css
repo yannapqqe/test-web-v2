@@ -1584,17 +1584,17 @@ textarea.y-input {
 
 
 /* =================================================================
-   BULLETPROOF SOAP BUBBLE SYSTEM (DEDICATED CANVAS LAYER)
+   BULLETPROOF SOAP BUBBLE SYSTEM (OPTIMIZED MOBILE & COLOR SHIMMER)
    ================================================================= */
 
 /* 1. Main Outer Container Wrapper */
 .pure-css-bubbles {
   position: relative !important;
   width: 100% !important;
-  min-height: 100vh !important;  /* Prevents zero-height collapse */
+  min-height: 100vh !important;
   box-sizing: border-box;
-  isolation: isolate;            /* Establishes clean stacking context */
-  overflow: hidden;
+  isolation: isolate;
+  overflow: hidden !important; /* Strictly clamps mobile horizontal scroll */
 }
 
 /* 2. Dedicated Background Bubble Canvas */
@@ -1605,73 +1605,91 @@ textarea.y-input {
   width: 100% !important;
   height: 100% !important;
   pointer-events: none !important;
-  z-index: 1 !important;         /* Fixed above container background, below text */
+  z-index: 1 !important;
 
-  /* Tile height setup */
+  /* Seamless Tiling Setup */
   background-size: 100% 1000px !important;
   background-repeat: repeat-y !important;
+  mix-blend-mode: multiply; /* Enhances color saturation against background */
 
-  /* Multi-gradient soap bubbles (Desktop) */
+  /* Multi-gradient soap bubbles (Desktop Palette) */
   background-image: 
-    /* --- LEFT SIDE BUBBLES --- */
-    radial-gradient(circle at 16% 550px, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.1) 55px, rgba(179, 229, 252, 0.7) 67px, rgba(3, 169, 244, 0.3) 72px, transparent 77px),
-    radial-gradient(circle at 22% 350px, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.1) 130px, rgba(255, 224, 178, 0.8) 141px, rgba(255, 152, 0, 0.25) 146px, transparent 151px),
-    radial-gradient(circle at 12% 200px, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.1) 80px, rgba(255, 182, 193, 0.7) 96px, rgba(255, 105, 180, 0.4) 101px, transparent 106px),
-    radial-gradient(circle at 14% 750px, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.1) 88px, rgba(225, 190, 231, 0.7) 99px, rgba(156, 39, 176, 0.3) 104px, transparent 109px),
+    /* Pink / Magenta Soap Bubbles */
+    radial-gradient(circle at 12% 200px, rgba(255, 255, 255, 0.95) 0%, rgba(255, 182, 193, 0.6) 40%, rgba(233, 30, 99, 0.4) 65%, transparent 75%),
+    radial-gradient(circle at 86% 250px, rgba(255, 255, 255, 0.95) 0%, rgba(255, 205, 210, 0.7) 45%, rgba(233, 30, 99, 0.45) 70%, transparent 80%),
+    
+    /* Blue / Cyan Soap Bubbles */
+    radial-gradient(circle at 16% 550px, rgba(255, 255, 255, 0.95) 0%, rgba(179, 229, 252, 0.7) 50%, rgba(3, 169, 244, 0.4) 70%, transparent 78%),
+    radial-gradient(circle at 82% 800px, rgba(255, 255, 255, 0.95) 0%, rgba(179, 229, 252, 0.7) 45%, rgba(3, 169, 244, 0.35) 68%, transparent 75%),
+    
+    /* Orange / Gold Soap Bubbles */
+    radial-gradient(circle at 22% 350px, rgba(255, 255, 255, 0.95) 0%, rgba(255, 224, 178, 0.75) 45%, rgba(255, 152, 0, 0.35) 68%, transparent 75%),
+    
+    /* Purple / Violet Soap Bubbles */
+    radial-gradient(circle at 14% 750px, rgba(255, 255, 255, 0.95) 0%, rgba(225, 190, 231, 0.7) 45%, rgba(156, 39, 176, 0.35) 68%, transparent 75%),
+    radial-gradient(circle at 88% 500px, rgba(255, 255, 255, 0.95) 0%, rgba(209, 196, 233, 0.7) 45%, rgba(103, 58, 183, 0.3) 65%, transparent 72%) !important;
 
-    /* --- RIGHT SIDE BUBBLES --- */
-    radial-gradient(circle at 80% 650px, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.1) 65px, rgba(178, 223, 219, 0.7) 74px, rgba(0, 150, 136, 0.3) 78px, transparent 83px),
-    radial-gradient(circle at 82% 800px, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.1) 95px, rgba(179, 229, 252, 0.8) 107px, rgba(3, 169, 244, 0.3) 112px, transparent 117px),
-    radial-gradient(circle at 86% 250px, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.15) 112px, rgba(255, 205, 210, 0.8) 122px, rgba(233, 30, 99, 0.3) 127px, transparent 132px),
-    radial-gradient(circle at 88% 500px, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.1) 48px, rgba(209, 196, 233, 0.7) 58px, rgba(103, 58, 183, 0.25) 62px, transparent 67px) !important;
-
-  animation: floatAndPulseTight 40s ease-in-out infinite alternate;
+  /* Smooth GPU-Accelerated Animation */
+  will-change: transform, filter;
+  animation: floatAndShimmerDesktop 25s ease-in-out infinite alternate;
 }
 
-/* 3. Foregound Content Layer */
+/* 3. Foreground Content Layer */
 .bubble-content {
   position: relative !important;
-  z-index: 10 !important;        /* Keeps cards, images, and text safely on top */
+  z-index: 10 !important;
 }
 
-/* 4. Desktop Floating Keyframes */
-@keyframes floatAndPulseTight {
+/* 4. Desktop Animation Keyframes (Smoother Hue Shifts) */
+@keyframes floatAndShimmerDesktop {
   0% {
-    transform: translateY(-4px) scale(1.02);
-    filter: hue-rotate(0deg);
+    transform: translateY(0px) scale(1);
+    filter: hue-rotate(0deg) contrast(100%);
   }
-  30% {
-    transform: translateY(2px) scale(1.1);
-    filter: hue-rotate(100deg);
-  }
-  60% {
-    transform: translateY(-2px) scale(1.0);
-    filter: hue-rotate(220deg);
-  }
-  85% {
-    transform: translateY(5px) scale(1.12);
-    filter: hue-rotate(310deg);
+  50% {
+    transform: translateY(-12px) scale(1.02);
+    filter: hue-rotate(120deg) contrast(110%);
   }
   100% {
-    transform: translateY(-1px) scale(1.05);
-    filter: hue-rotate(360deg);
+    transform: translateY(8px) scale(0.99);
+    filter: hue-rotate(240deg) contrast(105%);
   }
 }
 
 /* 5. Mobile Optimization (<= 768px) */
-@keyframes floatBubbleMobile {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+@keyframes floatAndShimmerMobile {
+  0% {
+    transform: translateY(0px);
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px);
+    filter: hue-rotate(90deg);
+  }
+  100% {
+    transform: translateY(0px);
+    filter: hue-rotate(180deg);
+  }
 }
 
 @media screen and (max-width: 768px) {
   .bubble-bg-layer {
-    background-size: 100% 800px !important;
-    animation: floatBubbleMobile 7s ease-in-out infinite;
+    background-size: 100% 600px !important; /* Shorter tile height for mobile screens */
+    mix-blend-mode: normal !important;
+    animation: floatAndShimmerMobile 12s ease-in-out infinite !important;
+    
+    /* Vibrant, Inward-shifted Gradient Coordinates (Prevents Off-screen Clipping) */
     background-image: 
-      radial-gradient(circle at 12% 140px, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.15) 30px, rgba(255, 182, 193, 0.6) 42px, rgba(255, 105, 180, 0.2) 46px, transparent 49px),
-      radial-gradient(circle at 86% 320px, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.15) 25px, rgba(179, 229, 252, 0.6) 36px, rgba(3, 169, 244, 0.2) 40px, transparent 43px),
-      radial-gradient(circle at 15% 520px, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.15) 35px, rgba(255, 224, 178, 0.65) 48px, rgba(255, 152, 0, 0.2) 52px, transparent 55px),
-      radial-gradient(circle at 84% 680px, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.15) 28px, rgba(225, 190, 231, 0.6) 40px, rgba(156, 39, 176, 0.2) 44px, transparent 47px) !important;
+      /* Top Left Pink Bubble */
+      radial-gradient(circle at 8% 120px, rgba(255, 255, 255, 0.95) 0%, rgba(255, 105, 180, 0.5) 35px, rgba(233, 30, 99, 0.25) 50px, transparent 55px),
+      
+      /* Top Right Blue Bubble */
+      radial-gradient(circle at 92% 260px, rgba(255, 255, 255, 0.95) 0%, rgba(3, 169, 244, 0.5) 30px, rgba(0, 188, 212, 0.25) 45px, transparent 50px),
+      
+      /* Mid Left Gold Bubble */
+      radial-gradient(circle at 10% 400px, rgba(255, 255, 255, 0.95) 0%, rgba(255, 152, 0, 0.5) 32px, rgba(255, 193, 7, 0.25) 46px, transparent 52px),
+      
+      /* Bottom Right Purple Bubble */
+      radial-gradient(circle at 90% 520px, rgba(255, 255, 255, 0.95) 0%, rgba(156, 39, 176, 0.5) 32px, rgba(103, 58, 183, 0.25) 48px, transparent 52px) !important;
   }
 }
