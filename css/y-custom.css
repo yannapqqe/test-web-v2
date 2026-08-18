@@ -1647,6 +1647,8 @@ textarea.y-input {
   }
 }
 
+
+
 /* 5. Mobile Optimization (<= 768px) */
 @keyframes floatBubbleMobile {
   0% {
@@ -1667,6 +1669,7 @@ textarea.y-input {
   .bubble-bg-layer {
     background-size: 100% 800px !important;
     animation: floatBubbleMobile 12s ease-in-out infinite;
+    /* keep your radial-gradients below */
     background-image: 
       radial-gradient(circle at 12% 140px, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.15) 30px, rgba(255, 182, 193, 0.6) 42px, rgba(255, 105, 180, 0.2) 46px, transparent 49px),
       radial-gradient(circle at 86% 320px, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.15) 25px, rgba(179, 229, 252, 0.6) 36px, rgba(3, 169, 244, 0.2) 40px, transparent 43px),
