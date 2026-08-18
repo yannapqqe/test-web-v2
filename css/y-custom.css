@@ -562,7 +562,6 @@ textarea.y-input {
 /* Hero Section Base & Dark Overlay */
 .hero-overlay {
     position: relative;
-    background: url("../picture/ngo/ACT Plus Charity_封面.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
