@@ -141,23 +141,12 @@ h6 {
 
 /* Image / Background */
 
-.bgimg {
-    background-image: url("../picture/ngo/愛友家基金logo_3.jpg"); /* Default image */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:cover;
-    min-height: 70vh;
-}
-
 
 .nav-logo {
     width: 160px;
     height: 80px;
     object-fit: contain;
     margin-right: 8px;
-}
-
-jpg');
 }
 
 /* FORCE HERO HEADER BACKGROUND SHOW */
@@ -562,7 +551,7 @@ textarea.y-input {
 /* Hero Section Base & Dark Overlay */
 .hero-overlay {
     position: relative;
-    background: url("../picture/ngo/ACT Plus Charity_封面.jpg");
+    background: url("../picture/ngo/test.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
